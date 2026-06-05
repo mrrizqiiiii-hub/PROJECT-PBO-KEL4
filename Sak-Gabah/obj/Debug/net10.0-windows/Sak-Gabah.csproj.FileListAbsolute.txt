@@ -1,0 +1,16 @@
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\bin\Debug\net10.0-windows\Sak-Gabah.exe
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\bin\Debug\net10.0-windows\Sak-Gabah.deps.json
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\bin\Debug\net10.0-windows\Sak-Gabah.runtimeconfig.json
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\bin\Debug\net10.0-windows\Sak-Gabah.dll
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\bin\Debug\net10.0-windows\Sak-Gabah.pdb
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Form1.resources
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.dll
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\refint\Sak-Gabah.dll
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.pdb
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.genruntimeconfig.cache
+C:\Users\ASUS\source\repos\Sak-Gabah\Sak-Gabah\obj\Debug\net10.0-windows\ref\Sak-Gabah.dll
