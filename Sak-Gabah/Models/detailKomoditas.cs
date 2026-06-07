@@ -10,8 +10,6 @@ namespace Sak.Gabah
         public int stok { get; set; }
         public decimal harga { get; set; } 
         public bool status_aktif { get; set; } 
-        public string  kondisi { get; set; }
-        
 
     }
 }
