@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Sak.Gabah
+namespace Sak_Gabah.Models
 {
-    public class Komoditas
+    public class M_komoditas
     {
         public int id_komoditas { get; set; } 
         public int maksimal_stok { get; set; }

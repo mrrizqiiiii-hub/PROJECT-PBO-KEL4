@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\controllers\\authlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\controllers\\authlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\sak-gabah.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\sak-gabah.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\models\\detailkomoditas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\models\\detailkomoditas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\views\\karyawan\\v_tambahtransaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\views\\karyawan\\v_tambahtransaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\views\\filtering\\v_filternamausername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\views\\filtering\\v_filternamausername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\views\\filtering\\v_filterkomoditas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\views\\filtering\\v_filterkomoditas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|c:\\users\\asus\\source\\repos\\project-pbo-kel4\\sak-gabah\\views\\supplier\\v_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56625867-872F-951A-3773-BDE3C703AFBC}|Sak-Gabah\\Sak-Gabah.csproj|solutionrelative:sak-gabah\\views\\supplier\\v_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,27 +35,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthLogin.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Controllers\\AuthLogin.cs",
-              "RelativeDocumentMoniker": "Sak-Gabah\\Controllers\\AuthLogin.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Controllers\\AuthLogin.cs",
-              "RelativeToolTip": "Sak-Gabah\\Controllers\\AuthLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T06:24:31.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Sak-Gabah",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Sak-Gabah.csproj",
               "RelativeDocumentMoniker": "Sak-Gabah\\Sak-Gabah.csproj",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Sak-Gabah.csproj",
               "RelativeToolTip": "Sak-Gabah\\Sak-Gabah.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-07T06:22:49.418Z",
+              "WhenOpened": "2026-06-07T13:27:56.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "V_tambahtransaksi.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Karyawan\\V_tambahtransaksi.cs",
+              "RelativeDocumentMoniker": "Sak-Gabah\\Views\\Karyawan\\V_tambahtransaksi.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Karyawan\\V_tambahtransaksi.cs [Design]",
+              "RelativeToolTip": "Sak-Gabah\\Views\\Karyawan\\V_tambahtransaksi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T13:19:08.623Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "V_filterNamaUsername.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Filtering\\V_filterNamaUsername.cs",
+              "RelativeDocumentMoniker": "Sak-Gabah\\Views\\Filtering\\V_filterNamaUsername.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Filtering\\V_filterNamaUsername.cs [Design]",
+              "RelativeToolTip": "Sak-Gabah\\Views\\Filtering\\V_filterNamaUsername.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T13:14:31.255Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "V_filterKomoditas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Filtering\\V_filterKomoditas.cs",
+              "RelativeDocumentMoniker": "Sak-Gabah\\Views\\Filtering\\V_filterKomoditas.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Filtering\\V_filterKomoditas.cs [Design]",
+              "RelativeToolTip": "Sak-Gabah\\Views\\Filtering\\V_filterKomoditas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T13:10:14.559Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "V_register.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Supplier\\V_register.cs",
+              "RelativeDocumentMoniker": "Sak-Gabah\\Views\\Supplier\\V_register.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Views\\Supplier\\V_register.cs",
+              "RelativeToolTip": "Sak-Gabah\\Views\\Supplier\\V_register.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T13:07:59.163Z",
               "EditorCaption": ""
             },
             {
@@ -68,48 +104,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "detailKomoditas.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Models\\detailKomoditas.cs",
-              "RelativeDocumentMoniker": "Sak-Gabah\\Models\\detailKomoditas.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Models\\detailKomoditas.cs",
-              "RelativeToolTip": "Sak-Gabah\\Models\\detailKomoditas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T04:59:21.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Sak-Gabah\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Form1.Designer.cs",
-              "RelativeToolTip": "Sak-Gabah\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T04:19:01.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Form1.cs",
-              "RelativeDocumentMoniker": "Sak-Gabah\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\PROJECT-PBO-KEL4\\Sak-Gabah\\Form1.cs",
-              "RelativeToolTip": "Sak-Gabah\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T04:18:52.517Z"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

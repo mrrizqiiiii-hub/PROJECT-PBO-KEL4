@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sak-Gabah")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a883f1cc39518d6bafd5caa6c1ef7eed20a7ee2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ed4a0a699eae56aaa139fdbc0fc8c1dbf2dd316")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sak-Gabah")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sak-Gabah")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

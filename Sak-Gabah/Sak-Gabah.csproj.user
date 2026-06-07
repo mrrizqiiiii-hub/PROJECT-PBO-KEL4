@@ -4,7 +4,76 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\CheckForm.cs">
+    <Compile Update="Views\Filtering\V_filterKomoditas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\V_filterNamaUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\V_filterTanggal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_kelolaKomoditas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\V_kelolaAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_laporanSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_laporanPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_registerKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_tambahAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_tambahKomoditas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_tambahPengajuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_tambahSetoran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Karyawan\V_tambahtransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_verifikasiSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\V_halamanLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Karyawan\V_dashboarKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Karyawan\V_kelolaKomoditasKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Karyawan\V_kelolaSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_dashboardSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_pengajuanSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_riwayatSetor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_setorSupply.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
