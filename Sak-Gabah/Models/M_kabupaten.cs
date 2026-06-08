@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Sak_Gabah.Models
 {
-    public class M_kabupaten
+    public class M_kabupaten : M_baseModel
     {
-        public int id_kabupaten { get; set; }
         public string kabupaten { get; set; }
         public int IdKecamatan { get; set; }
         public M_kecamatan kecamatan { get; set; } = new M_kecamatan();

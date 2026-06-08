@@ -2,9 +2,8 @@
 
 namespace Sak_Gabah.Models
 {
-    public class M_detailKomoditas
+    public class M_detailKomoditas : M_baseModel
     {
-        public int id_detail_komoditas { get; set; } 
         public int stok { get; set; }
         public decimal harga { get; set; } 
         public bool status_aktif { get; set; } 

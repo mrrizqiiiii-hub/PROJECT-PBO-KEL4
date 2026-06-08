@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Sak_Gabah.Models
 {
-    public class M_user
+    public class M_user : M_basePerson
     {
-        public int id_User { get; set; }
         public string email { get; set; }
         public string username { get; set; }
         public string password { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Sak_Gabah.Views
 {
-    partial class Form1
+    partial class V_kelolaKomoditas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_kelolaKomoditas));
             button1 = new Button();
             button2 = new Button();
             SuspendLayout();

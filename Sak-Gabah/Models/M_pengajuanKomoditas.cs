@@ -1,9 +1,8 @@
 ﻿using System;
 namespace Sak_Gabah.Models
 {
-    public class M_pengajuanKomoditas
+    public class M_pengajuanKomoditas : M_baseModel
     {
-        public int id_pengajuan { get; set; } 
         public string merk { get; set; }
         public string alamat { get; set; }
         public decimal harga { get; set; }
