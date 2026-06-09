@@ -29,60 +29,63 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_filterKomoditas));
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
+            batalbutton = new Button();
+            namaKomoditastextBox = new TextBox();
+            cariKomoditasbutton = new Button();
             SuspendLayout();
             // 
-            // button1
+            // batalbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImageLayout = ImageLayout.Center;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(221, 200);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 82);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
+            batalbutton.BackColor = Color.Transparent;
+            batalbutton.BackgroundImageLayout = ImageLayout.Center;
+            batalbutton.FlatAppearance.BorderSize = 0;
+            batalbutton.FlatStyle = FlatStyle.Flat;
+            batalbutton.ForeColor = Color.Transparent;
+            batalbutton.Location = new Point(44, 211);
+            batalbutton.Name = "batalbutton";
+            batalbutton.Size = new Size(153, 82);
+            batalbutton.TabIndex = 1;
+            batalbutton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // namaKomoditastextBox
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImageLayout = ImageLayout.Center;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(40, 200);
-            button2.Name = "button2";
-            button2.Size = new Size(153, 82);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
+            namaKomoditastextBox.BackColor = SystemColors.Window;
+            namaKomoditastextBox.BorderStyle = BorderStyle.None;
+            namaKomoditastextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            namaKomoditastextBox.ForeColor = SystemColors.MenuText;
+            namaKomoditastextBox.Location = new Point(98, 103);
+            namaKomoditastextBox.Multiline = true;
+            namaKomoditastextBox.Name = "namaKomoditastextBox";
+            namaKomoditastextBox.Size = new Size(233, 58);
+            namaKomoditastextBox.TabIndex = 2;
+            namaKomoditastextBox.TextChanged += namaKomoditastextBox_TextChanged;
             // 
-            // textBox1
+            // cariKomoditasbutton
             // 
-            textBox1.BackColor = SystemColors.Window;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(90, 96);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(233, 58);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            cariKomoditasbutton.BackColor = Color.Transparent;
+            cariKomoditasbutton.BackgroundImageLayout = ImageLayout.Center;
+            cariKomoditasbutton.FlatAppearance.BorderSize = 0;
+            cariKomoditasbutton.FlatStyle = FlatStyle.Flat;
+            cariKomoditasbutton.ForeColor = Color.Transparent;
+            cariKomoditasbutton.Location = new Point(232, 211);
+            cariKomoditasbutton.Name = "cariKomoditasbutton";
+            cariKomoditasbutton.Size = new Size(153, 82);
+            cariKomoditasbutton.TabIndex = 3;
+            cariKomoditasbutton.UseVisualStyleBackColor = false;
+            cariKomoditasbutton.Click += cariKomoditasbutton_Click;
             // 
-            // CariKomoditas
+            // V_filterKomoditas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(413, 321);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(429, 337);
+            Controls.Add(cariKomoditasbutton);
+            Controls.Add(namaKomoditastextBox);
+            Controls.Add(batalbutton);
             DoubleBuffered = true;
-            Name = "CariKomoditas";
+            Name = "V_filterKomoditas";
             Text = "CariKomoditas";
             ResumeLayout(false);
             PerformLayout();
@@ -91,7 +94,8 @@
         #endregion
 
         private Button button1;
-        private Button button2;
-        private TextBox textBox1;
+        private Button batalbutton;
+        private TextBox namaKomoditastextBox;
+        private Button cariKomoditasbutton;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Sak_Gabah.Views
 {
-    partial class Form2
+    partial class V_laporanSupply
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_laporanSupply));
             button1 = new Button();
             button2 = new Button();
             SuspendLayout();

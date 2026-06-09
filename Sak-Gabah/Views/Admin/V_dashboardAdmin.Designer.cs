@@ -45,6 +45,8 @@ namespace Sak_Gabah.Views
             penjualanLabel = new Label();
             menungguVerifikasiLabel = new Label();
             selamatDatanglabel = new Label();
+            usernameTampilanlabel = new Label();
+            roleTampilanlabel = new Label();
             SuspendLayout();
             // 
             // kelolaKomoditasbutton
@@ -80,7 +82,7 @@ namespace Sak_Gabah.Views
             laporanSupplybutton.Size = new Size(130, 41);
             laporanSupplybutton.TabIndex = 0;
             laporanSupplybutton.UseVisualStyleBackColor = false;
-            laporanSupplybutton.Click += kelolaKomoditasbutton_Click;
+            laporanSupplybutton.Click += laporanSupplybutton_Click;
             // 
             // laporanPenjualanbutton
             // 
@@ -92,7 +94,7 @@ namespace Sak_Gabah.Views
             laporanPenjualanbutton.Size = new Size(130, 41);
             laporanPenjualanbutton.TabIndex = 0;
             laporanPenjualanbutton.UseVisualStyleBackColor = false;
-            laporanPenjualanbutton.Click += kelolaKomoditasbutton_Click;
+            laporanPenjualanbutton.Click += laporanPenjualanbutton_Click;
             // 
             // verifikasiSupplierbutton
             // 
@@ -104,7 +106,7 @@ namespace Sak_Gabah.Views
             verifikasiSupplierbutton.Size = new Size(130, 41);
             verifikasiSupplierbutton.TabIndex = 0;
             verifikasiSupplierbutton.UseVisualStyleBackColor = false;
-            verifikasiSupplierbutton.Click += kelolaKomoditasbutton_Click;
+            verifikasiSupplierbutton.Click += verifikasiSupplierbutton_Click;
             // 
             // registerKaryawanbutton
             // 
@@ -116,7 +118,7 @@ namespace Sak_Gabah.Views
             registerKaryawanbutton.Size = new Size(130, 41);
             registerKaryawanbutton.TabIndex = 0;
             registerKaryawanbutton.UseVisualStyleBackColor = false;
-            registerKaryawanbutton.Click += kelolaKomoditasbutton_Click;
+            registerKaryawanbutton.Click += registerKaryawanbutton_Click;
             // 
             // stokTotalLabel
             // 
@@ -168,6 +170,31 @@ namespace Sak_Gabah.Views
             selamatDatanglabel.TextAlign = ContentAlignment.MiddleLeft;
             selamatDatanglabel.Click += label1_Click;
             // 
+            // usernameTampilanlabel
+            // 
+            usernameTampilanlabel.BackColor = Color.Transparent;
+            usernameTampilanlabel.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            usernameTampilanlabel.ForeColor = Color.DarkGreen;
+            usernameTampilanlabel.Location = new Point(60, 672);
+            usernameTampilanlabel.Name = "usernameTampilanlabel";
+            usernameTampilanlabel.Size = new Size(133, 28);
+            usernameTampilanlabel.TabIndex = 4;
+            usernameTampilanlabel.Text = "Abing";
+            usernameTampilanlabel.TextAlign = ContentAlignment.MiddleLeft;
+            usernameTampilanlabel.Click += label1_Click_1;
+            // 
+            // roleTampilanlabel
+            // 
+            roleTampilanlabel.BackColor = Color.Transparent;
+            roleTampilanlabel.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roleTampilanlabel.ForeColor = Color.DarkGreen;
+            roleTampilanlabel.Location = new Point(63, 700);
+            roleTampilanlabel.Name = "roleTampilanlabel";
+            roleTampilanlabel.Size = new Size(65, 20);
+            roleTampilanlabel.TabIndex = 5;
+            roleTampilanlabel.Text = "Admin";
+            roleTampilanlabel.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // V_dashboardAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -175,6 +202,8 @@ namespace Sak_Gabah.Views
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1350, 729);
+            Controls.Add(roleTampilanlabel);
+            Controls.Add(usernameTampilanlabel);
             Controls.Add(selamatDatanglabel);
             Controls.Add(menungguVerifikasiLabel);
             Controls.Add(penjualanLabel);
@@ -188,6 +217,7 @@ namespace Sak_Gabah.Views
             DoubleBuffered = true;
             Name = "V_dashboardAdmin";
             Text = "Form1";
+            FormClosed += V_dashboardAdmin_FormClosed;
             Load += V_dashboardAdmin_Load;
             ResumeLayout(false);
         }
@@ -204,5 +234,7 @@ namespace Sak_Gabah.Views
         private Label penjualanLabel;
         private Label menungguVerifikasiLabel;
         private Label selamatDatanglabel;
+        private Label usernameTampilanlabel;
+        private Label roleTampilanlabel;
     }
 }

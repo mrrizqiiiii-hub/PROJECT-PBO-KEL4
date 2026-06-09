@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Views\Admin\V_laporanSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Admin\V_lihatDetailKomoditas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Filtering\V_filterKomoditas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,9 +23,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\V_kelolaAkun.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\Admin\V_laporanSupply.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Admin\V_laporanPenjualan.cs">
@@ -72,6 +75,12 @@
     </Compile>
     <Compile Update="Views\Supplier\V_setorSupply.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuDetailKomoditas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuKomoditas.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

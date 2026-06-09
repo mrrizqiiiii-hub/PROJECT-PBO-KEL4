@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Sak_Gabah.Views
 {
-    public partial class Form2 : Form
+    public partial class V_laporanSupply : Form
     {
-        public Form2()
+        public V_laporanSupply()
         {
             InitializeComponent();
         }

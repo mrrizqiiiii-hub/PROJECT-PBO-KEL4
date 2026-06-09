@@ -29,75 +29,80 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahKomoditas));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            maksimalStoktextBox = new TextBox();
+            namaKomoditastextBox = new TextBox();
+            maksimalSuppliertextBox = new TextBox();
+            tambahbutton = new Button();
+            batalbutton = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // maksimalStoktextBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(77, 120);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(190, 33);
-            textBox1.TabIndex = 0;
+            maksimalStoktextBox.BorderStyle = BorderStyle.None;
+            maksimalStoktextBox.Location = new Point(87, 170);
+            maksimalStoktextBox.Multiline = true;
+            maksimalStoktextBox.Name = "maksimalStoktextBox";
+            maksimalStoktextBox.Size = new Size(232, 33);
+            maksimalStoktextBox.TabIndex = 0;
             // 
-            // textBox2
+            // namaKomoditastextBox
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(77, 45);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(190, 33);
-            textBox2.TabIndex = 1;
+            namaKomoditastextBox.BorderStyle = BorderStyle.None;
+            namaKomoditastextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            namaKomoditastextBox.Location = new Point(87, 70);
+            namaKomoditastextBox.Multiline = true;
+            namaKomoditastextBox.Name = "namaKomoditastextBox";
+            namaKomoditastextBox.Size = new Size(232, 33);
+            namaKomoditastextBox.TabIndex = 1;
             // 
-            // textBox3
+            // maksimalSuppliertextBox
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(77, 194);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(190, 33);
-            textBox3.TabIndex = 2;
+            maksimalSuppliertextBox.BorderStyle = BorderStyle.None;
+            maksimalSuppliertextBox.Location = new Point(87, 274);
+            maksimalSuppliertextBox.Multiline = true;
+            maksimalSuppliertextBox.Name = "maksimalSuppliertextBox";
+            maksimalSuppliertextBox.Size = new Size(232, 33);
+            maksimalSuppliertextBox.TabIndex = 2;
             // 
-            // button1
+            // tambahbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(28, 252);
-            button1.Name = "button1";
-            button1.Size = new Size(134, 57);
-            button1.TabIndex = 3;
-            button1.UseVisualStyleBackColor = false;
+            tambahbutton.BackColor = Color.Transparent;
+            tambahbutton.FlatAppearance.BorderSize = 0;
+            tambahbutton.FlatStyle = FlatStyle.Flat;
+            tambahbutton.ForeColor = Color.Transparent;
+            tambahbutton.Location = new Point(212, 361);
+            tambahbutton.Name = "tambahbutton";
+            tambahbutton.Size = new Size(153, 63);
+            tambahbutton.TabIndex = 4;
+            tambahbutton.UseVisualStyleBackColor = false;
+            tambahbutton.Click += tambahbutton_Click;
             // 
-            // button2
+            // batalbutton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(177, 252);
-            button2.Name = "button2";
-            button2.Size = new Size(132, 57);
-            button2.TabIndex = 4;
-            button2.UseVisualStyleBackColor = false;
+            batalbutton.BackColor = Color.Transparent;
+            batalbutton.FlatAppearance.BorderSize = 0;
+            batalbutton.FlatStyle = FlatStyle.Flat;
+            batalbutton.ForeColor = Color.Transparent;
+            batalbutton.Location = new Point(38, 361);
+            batalbutton.Name = "batalbutton";
+            batalbutton.Size = new Size(153, 63);
+            batalbutton.TabIndex = 4;
+            batalbutton.UseVisualStyleBackColor = false;
+            batalbutton.Click += batalbutton_Click;
             // 
-            // TambahKomoditas
+            // V_tambahKomoditas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(340, 321);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Name = "TambahKomoditas";
+            ClientSize = new Size(403, 445);
+            Controls.Add(batalbutton);
+            Controls.Add(tambahbutton);
+            Controls.Add(maksimalSuppliertextBox);
+            Controls.Add(namaKomoditastextBox);
+            Controls.Add(maksimalStoktextBox);
+            Name = "V_tambahKomoditas";
             Text = "TambahKomoditas";
             Load += TambahKomoditas_Load;
             ResumeLayout(false);
@@ -106,10 +111,10 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
-        private Button button2;
+        private TextBox maksimalStoktextBox;
+        private TextBox namaKomoditastextBox;
+        private TextBox maksimalSuppliertextBox;
+        private Button tambahbutton;
+        private Button batalbutton;
     }
 }

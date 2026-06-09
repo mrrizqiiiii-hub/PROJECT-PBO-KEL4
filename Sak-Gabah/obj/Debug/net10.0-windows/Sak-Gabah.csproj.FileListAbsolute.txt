@@ -25,7 +25,6 @@ C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\bin\Debug\net10.0-windows\
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak-Gabah.csproj.AssemblyReference.cache
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Properties.Resources.resources
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.V_laporanPenjualan.resources
-C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.Form2.resources
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.V_registerKaryawan.resources
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.Admin.V_tambahAkun.resources
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.Admin.V_tambahKomoditas.resources
@@ -60,3 +59,7 @@ C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.V_kelolaKomoditas.resources
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.V_dashboardAdmin.resources
 C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.V_dashboardKaryawan.resources
+C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.V_laporanSupply.resources
+C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views._UserControl.UC_kartuKomoditas.resources
+C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views.Admin.V_lihatDetailKomoditas.resources
+C:\Users\ASUS\source\repos\PROJECT-PBO-KEL4\Sak-Gabah\obj\Debug\net10.0-windows\Sak_Gabah.Views._UserControl.UC_kartuDetailKomoditas.resources
