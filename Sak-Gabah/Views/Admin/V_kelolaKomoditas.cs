@@ -62,7 +62,7 @@ namespace Sak_Gabah.Views
             }
             else
             {
-                daftarData = controller.cariKomoditas(this.kataKunci);
+                daftarData = controller.ambilDataKomoditas(this.kataKunci);
             }
 
             if (daftarData.Count == 0)

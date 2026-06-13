@@ -29,50 +29,95 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_kelolaSupply));
-            button1 = new Button();
-            button2 = new Button();
+            dashboardbutton = new Button();
+            kelolaTransaksibutton = new Button();
+            filterTanggalbutton = new Button();
+            filterKomoditasbutton = new Button();
+            setoranLayoutPanel = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // button1
+            // dashboardbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(137, 380);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 58);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
+            dashboardbutton.BackColor = Color.Transparent;
+            dashboardbutton.FlatAppearance.BorderSize = 0;
+            dashboardbutton.FlatStyle = FlatStyle.Flat;
+            dashboardbutton.Location = new Point(25, 62);
+            dashboardbutton.Name = "dashboardbutton";
+            dashboardbutton.Size = new Size(130, 41);
+            dashboardbutton.TabIndex = 13;
+            dashboardbutton.UseVisualStyleBackColor = false;
+            dashboardbutton.Click += dashboardbutton_Click;
             // 
-            // button2
+            // kelolaTransaksibutton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(279, 380);
-            button2.Name = "button2";
-            button2.Size = new Size(127, 58);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = false;
+            kelolaTransaksibutton.BackColor = Color.Transparent;
+            kelolaTransaksibutton.FlatAppearance.BorderSize = 0;
+            kelolaTransaksibutton.FlatStyle = FlatStyle.Flat;
+            kelolaTransaksibutton.Location = new Point(25, 157);
+            kelolaTransaksibutton.Name = "kelolaTransaksibutton";
+            kelolaTransaksibutton.Size = new Size(130, 41);
+            kelolaTransaksibutton.TabIndex = 13;
+            kelolaTransaksibutton.UseVisualStyleBackColor = false;
+            kelolaTransaksibutton.Click += kelolaTransaksibutton_Click;
             // 
-            // KelolaSupply
+            // filterTanggalbutton
+            // 
+            filterTanggalbutton.BackColor = Color.Transparent;
+            filterTanggalbutton.FlatAppearance.BorderSize = 0;
+            filterTanggalbutton.FlatStyle = FlatStyle.Flat;
+            filterTanggalbutton.Location = new Point(239, 622);
+            filterTanggalbutton.Name = "filterTanggalbutton";
+            filterTanggalbutton.Size = new Size(204, 82);
+            filterTanggalbutton.TabIndex = 13;
+            filterTanggalbutton.UseVisualStyleBackColor = false;
+            filterTanggalbutton.Click += filterTanggalbutton_Click;
+            // 
+            // filterKomoditasbutton
+            // 
+            filterKomoditasbutton.BackColor = Color.Transparent;
+            filterKomoditasbutton.FlatAppearance.BorderSize = 0;
+            filterKomoditasbutton.FlatStyle = FlatStyle.Flat;
+            filterKomoditasbutton.Location = new Point(479, 622);
+            filterKomoditasbutton.Name = "filterKomoditasbutton";
+            filterKomoditasbutton.Size = new Size(204, 82);
+            filterKomoditasbutton.TabIndex = 13;
+            filterKomoditasbutton.UseVisualStyleBackColor = false;
+            filterKomoditasbutton.Click += filterKomoditasbutton_Click;
+            // 
+            // setoranLayoutPanel
+            // 
+            setoranLayoutPanel.AutoScroll = true;
+            setoranLayoutPanel.BackColor = Color.Transparent;
+            setoranLayoutPanel.Location = new Point(239, 12);
+            setoranLayoutPanel.Name = "setoranLayoutPanel";
+            setoranLayoutPanel.Size = new Size(1099, 604);
+            setoranLayoutPanel.TabIndex = 14;
+            // 
+            // V_kelolaSupply
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(1350, 729);
+            Controls.Add(setoranLayoutPanel);
+            Controls.Add(filterKomoditasbutton);
+            Controls.Add(filterTanggalbutton);
+            Controls.Add(kelolaTransaksibutton);
+            Controls.Add(dashboardbutton);
             DoubleBuffered = true;
-            Name = "KelolaSupply";
+            Name = "V_kelolaSupply";
             Text = "KelolaSupply";
+            Load += V_kelolaSupply_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button dashboardbutton;
+        private Button kelolaTransaksibutton;
+        private Button filterTanggalbutton;
+        private Button filterKomoditasbutton;
+        private FlowLayoutPanel setoranLayoutPanel;
     }
 }

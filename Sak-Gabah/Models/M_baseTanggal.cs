@@ -6,6 +6,8 @@ namespace Sak_Gabah.Models
 {
     public abstract class M_baseTanggal : M_baseModel
     {
-        public DateTime tanggal { get; set; }
+        public DateOnly tanggal { get; set; }
+
+        public DateOnly tanggalTambahan { get; set; }
     }
 }

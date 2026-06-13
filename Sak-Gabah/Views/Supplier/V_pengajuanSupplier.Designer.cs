@@ -29,50 +29,94 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_pengajuanSupplier));
-            button1 = new Button();
-            button2 = new Button();
+            riwayatSetorbutton = new Button();
+            setorSupplyButton = new Button();
+            dashboardButton = new Button();
+            tambahPengajuanbutton = new Button();
+            pengajuanLayoutPanel = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // button1
+            // riwayatSetorbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(138, 380);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 58);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
+            riwayatSetorbutton.BackColor = Color.Transparent;
+            riwayatSetorbutton.FlatAppearance.BorderSize = 0;
+            riwayatSetorbutton.FlatStyle = FlatStyle.Flat;
+            riwayatSetorbutton.Location = new Point(22, 204);
+            riwayatSetorbutton.Name = "riwayatSetorbutton";
+            riwayatSetorbutton.Size = new Size(130, 41);
+            riwayatSetorbutton.TabIndex = 21;
+            riwayatSetorbutton.UseVisualStyleBackColor = false;
+            riwayatSetorbutton.Click += riwayatSetorbutton_Click;
             // 
-            // button2
+            // setorSupplyButton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(289, 380);
-            button2.Name = "button2";
-            button2.Size = new Size(127, 58);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = false;
+            setorSupplyButton.BackColor = Color.Transparent;
+            setorSupplyButton.FlatAppearance.BorderSize = 0;
+            setorSupplyButton.FlatStyle = FlatStyle.Flat;
+            setorSupplyButton.Location = new Point(22, 157);
+            setorSupplyButton.Name = "setorSupplyButton";
+            setorSupplyButton.Size = new Size(130, 41);
+            setorSupplyButton.TabIndex = 22;
+            setorSupplyButton.UseVisualStyleBackColor = false;
+            setorSupplyButton.Click += setorSupplyButton_Click;
             // 
-            // pengajuanSuplier
+            // dashboardButton
+            // 
+            dashboardButton.BackColor = Color.Transparent;
+            dashboardButton.FlatAppearance.BorderSize = 0;
+            dashboardButton.FlatStyle = FlatStyle.Flat;
+            dashboardButton.Location = new Point(22, 64);
+            dashboardButton.Name = "dashboardButton";
+            dashboardButton.Size = new Size(130, 41);
+            dashboardButton.TabIndex = 23;
+            dashboardButton.UseVisualStyleBackColor = false;
+            dashboardButton.Click += dashboardButton_Click;
+            // 
+            // tambahPengajuanbutton
+            // 
+            tambahPengajuanbutton.BackColor = Color.Transparent;
+            tambahPengajuanbutton.FlatAppearance.BorderSize = 0;
+            tambahPengajuanbutton.FlatStyle = FlatStyle.Flat;
+            tambahPengajuanbutton.Location = new Point(239, 621);
+            tambahPengajuanbutton.Name = "tambahPengajuanbutton";
+            tambahPengajuanbutton.Size = new Size(203, 81);
+            tambahPengajuanbutton.TabIndex = 21;
+            tambahPengajuanbutton.UseVisualStyleBackColor = false;
+            tambahPengajuanbutton.Click += tambahPengajuanbutton_Click;
+            // 
+            // pengajuanLayoutPanel
+            // 
+            pengajuanLayoutPanel.BackColor = Color.Transparent;
+            pengajuanLayoutPanel.Location = new Point(239, 12);
+            pengajuanLayoutPanel.Name = "pengajuanLayoutPanel";
+            pengajuanLayoutPanel.Size = new Size(1099, 603);
+            pengajuanLayoutPanel.TabIndex = 25;
+            // 
+            // V_pengajuanSupplier
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(1350, 729);
+            Controls.Add(pengajuanLayoutPanel);
+            Controls.Add(tambahPengajuanbutton);
+            Controls.Add(riwayatSetorbutton);
+            Controls.Add(setorSupplyButton);
+            Controls.Add(dashboardButton);
             DoubleBuffered = true;
-            Name = "pengajuanSuplier";
+            Name = "V_pengajuanSupplier";
             Text = "pengajuanSuplier";
+            Load += V_pengajuanSupplier_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button riwayatSetorbutton;
+        private Button setorSupplyButton;
+        private Button dashboardButton;
+        private Button tambahPengajuanbutton;
+        private FlowLayoutPanel pengajuanLayoutPanel;
     }
 }

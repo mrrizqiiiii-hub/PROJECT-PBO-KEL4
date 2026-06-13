@@ -36,7 +36,6 @@ namespace Sak_Gabah.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_dashboardAdmin));
             kelolaKomoditasbutton = new Button();
-            button1 = new Button();
             laporanSupplybutton = new Button();
             laporanPenjualanbutton = new Button();
             verifikasiSupplierbutton = new Button();
@@ -47,6 +46,7 @@ namespace Sak_Gabah.Views
             selamatDatanglabel = new Label();
             usernameTampilanlabel = new Label();
             roleTampilanlabel = new Label();
+            kelolaAkunbutton = new Button();
             SuspendLayout();
             // 
             // kelolaKomoditasbutton
@@ -60,17 +60,6 @@ namespace Sak_Gabah.Views
             kelolaKomoditasbutton.TabIndex = 0;
             kelolaKomoditasbutton.UseVisualStyleBackColor = false;
             kelolaKomoditasbutton.Click += kelolaKomoditasbutton_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(610, 344);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 41);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // laporanSupplybutton
             // 
@@ -190,10 +179,22 @@ namespace Sak_Gabah.Views
             roleTampilanlabel.ForeColor = Color.DarkGreen;
             roleTampilanlabel.Location = new Point(63, 700);
             roleTampilanlabel.Name = "roleTampilanlabel";
-            roleTampilanlabel.Size = new Size(65, 20);
+            roleTampilanlabel.Size = new Size(130, 20);
             roleTampilanlabel.TabIndex = 5;
             roleTampilanlabel.Text = "Admin";
             roleTampilanlabel.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // kelolaAkunbutton
+            // 
+            kelolaAkunbutton.BackColor = Color.Transparent;
+            kelolaAkunbutton.FlatAppearance.BorderSize = 0;
+            kelolaAkunbutton.FlatStyle = FlatStyle.Flat;
+            kelolaAkunbutton.Location = new Point(12, 672);
+            kelolaAkunbutton.Name = "kelolaAkunbutton";
+            kelolaAkunbutton.Size = new Size(45, 46);
+            kelolaAkunbutton.TabIndex = 6;
+            kelolaAkunbutton.UseVisualStyleBackColor = false;
+            kelolaAkunbutton.Click += kelolaAkunbutton_Click;
             // 
             // V_dashboardAdmin
             // 
@@ -202,13 +203,13 @@ namespace Sak_Gabah.Views
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1350, 729);
+            Controls.Add(kelolaAkunbutton);
             Controls.Add(roleTampilanlabel);
             Controls.Add(usernameTampilanlabel);
             Controls.Add(selamatDatanglabel);
             Controls.Add(menungguVerifikasiLabel);
             Controls.Add(penjualanLabel);
             Controls.Add(stokTotalLabel);
-            Controls.Add(button1);
             Controls.Add(registerKaryawanbutton);
             Controls.Add(verifikasiSupplierbutton);
             Controls.Add(laporanPenjualanbutton);
@@ -225,7 +226,6 @@ namespace Sak_Gabah.Views
         #endregion
 
         private Button kelolaKomoditasbutton;
-        private Button button1;
         private Button laporanSupplybutton;
         private Button laporanPenjualanbutton;
         private Button verifikasiSupplierbutton;
@@ -236,5 +236,6 @@ namespace Sak_Gabah.Views
         private Label selamatDatanglabel;
         private Label usernameTampilanlabel;
         private Label roleTampilanlabel;
+        private Button kelolaAkunbutton;
     }
 }

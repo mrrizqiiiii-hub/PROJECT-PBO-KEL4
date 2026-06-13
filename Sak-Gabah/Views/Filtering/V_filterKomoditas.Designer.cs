@@ -46,6 +46,7 @@
             batalbutton.Size = new Size(153, 82);
             batalbutton.TabIndex = 1;
             batalbutton.UseVisualStyleBackColor = false;
+            batalbutton.Click += batalbutton_Click;
             // 
             // namaKomoditastextBox
             // 

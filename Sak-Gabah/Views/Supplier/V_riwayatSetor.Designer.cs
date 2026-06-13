@@ -1,6 +1,6 @@
 ﻿namespace Sak_Gabah.Views
 {
-    partial class Riwayat_Stor
+    partial class V_riwayatSetor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,51 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Riwayat_Stor));
-            button1 = new Button();
-            button2 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_riwayatSetor));
+            setorSupplySetorbutton = new Button();
+            pengajuanSupplierButton = new Button();
+            dashboardButton = new Button();
+            filterKomoditasbutton = new Button();
+            filterTanggalbutton = new Button();
+            setorandataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)setorandataGridView).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // setorSupplySetorbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(137, 380);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 58);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
+            setorSupplySetorbutton.BackColor = Color.Transparent;
+            setorSupplySetorbutton.FlatAppearance.BorderSize = 0;
+            setorSupplySetorbutton.FlatStyle = FlatStyle.Flat;
+            setorSupplySetorbutton.Location = new Point(22, 157);
+            setorSupplySetorbutton.Name = "setorSupplySetorbutton";
+            setorSupplySetorbutton.Size = new Size(130, 41);
+            setorSupplySetorbutton.TabIndex = 21;
+            setorSupplySetorbutton.UseVisualStyleBackColor = false;
+            setorSupplySetorbutton.Click += setorSupplySetorbutton_Click;
             // 
-            // button2
+            // pengajuanSupplierButton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(288, 380);
-            button2.Name = "button2";
-            button2.Size = new Size(127, 58);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = false;
+            pengajuanSupplierButton.BackColor = Color.Transparent;
+            pengajuanSupplierButton.FlatAppearance.BorderSize = 0;
+            pengajuanSupplierButton.FlatStyle = FlatStyle.Flat;
+            pengajuanSupplierButton.Location = new Point(22, 110);
+            pengajuanSupplierButton.Name = "pengajuanSupplierButton";
+            pengajuanSupplierButton.Size = new Size(130, 41);
+            pengajuanSupplierButton.TabIndex = 22;
+            pengajuanSupplierButton.UseVisualStyleBackColor = false;
+            pengajuanSupplierButton.Click += pengajuanSupplierButton_Click;
             // 
-            // Riwayat_Stor
+            // dashboardButton
+            // 
+            dashboardButton.BackColor = Color.Transparent;
+            dashboardButton.FlatAppearance.BorderSize = 0;
+            dashboardButton.FlatStyle = FlatStyle.Flat;
+            dashboardButton.Location = new Point(22, 63);
+            dashboardButton.Name = "dashboardButton";
+            dashboardButton.Size = new Size(130, 41);
+            dashboardButton.TabIndex = 23;
+            dashboardButton.UseVisualStyleBackColor = false;
+            dashboardButton.Click += dashboardButton_Click;
+            // 
+            // filterKomoditasbutton
+            // 
+            filterKomoditasbutton.BackColor = Color.Transparent;
+            filterKomoditasbutton.FlatAppearance.BorderSize = 0;
+            filterKomoditasbutton.FlatStyle = FlatStyle.Flat;
+            filterKomoditasbutton.Location = new Point(486, 620);
+            filterKomoditasbutton.Name = "filterKomoditasbutton";
+            filterKomoditasbutton.Size = new Size(210, 87);
+            filterKomoditasbutton.TabIndex = 26;
+            filterKomoditasbutton.UseVisualStyleBackColor = false;
+            filterKomoditasbutton.Click += filterKomoditasbutton_Click;
+            // 
+            // filterTanggalbutton
+            // 
+            filterTanggalbutton.BackColor = Color.Transparent;
+            filterTanggalbutton.FlatAppearance.BorderSize = 0;
+            filterTanggalbutton.FlatStyle = FlatStyle.Flat;
+            filterTanggalbutton.Location = new Point(235, 621);
+            filterTanggalbutton.Name = "filterTanggalbutton";
+            filterTanggalbutton.Size = new Size(210, 87);
+            filterTanggalbutton.TabIndex = 25;
+            filterTanggalbutton.UseVisualStyleBackColor = false;
+            filterTanggalbutton.Click += filterTanggalbutton_Click;
+            // 
+            // setorandataGridView
+            // 
+            setorandataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            setorandataGridView.BackgroundColor = Color.Gainsboro;
+            setorandataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            setorandataGridView.Location = new Point(235, 12);
+            setorandataGridView.Name = "setorandataGridView";
+            setorandataGridView.Size = new Size(1103, 602);
+            setorandataGridView.TabIndex = 27;
+            // 
+            // V_riwayatSetor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(1350, 729);
+            Controls.Add(setorandataGridView);
+            Controls.Add(filterKomoditasbutton);
+            Controls.Add(filterTanggalbutton);
+            Controls.Add(setorSupplySetorbutton);
+            Controls.Add(pengajuanSupplierButton);
+            Controls.Add(dashboardButton);
             DoubleBuffered = true;
-            Name = "Riwayat_Stor";
+            Name = "V_riwayatSetor";
             Text = "Riwayat_Stor";
+            Load += V_riwayatSetor_Load;
+            ((System.ComponentModel.ISupportInitialize)setorandataGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button setorSupplySetorbutton;
+        private Button pengajuanSupplierButton;
+        private Button dashboardButton;
+        private Button filterKomoditasbutton;
+        private Button filterTanggalbutton;
+        private DataGridView setorandataGridView;
     }
 }

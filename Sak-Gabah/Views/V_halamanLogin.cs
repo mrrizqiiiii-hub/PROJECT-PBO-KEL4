@@ -16,7 +16,6 @@ namespace Sak_Gabah.Views
         public V_halamanLogin()
         {
             InitializeComponent();
-            Application.Exit();
 
         }
 
@@ -32,7 +31,7 @@ namespace Sak_Gabah.Views
         private void viewRegisterbutton_Click(object sender, EventArgs e)
         {
             V_register register = new V_register();
-            this.Close();
+            this.Hide();
             register.Show();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -54,7 +53,7 @@ namespace Sak_Gabah.Views
                 {
                     UserSession.userAktif = userResult;
 
-                    MessageBox.Show($"Selamat Datang, {userResult.username}!", "Login Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Selamat Datang, {userResult.namalengkap}!", "Login Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     if (userResult.role == "Admin")
                     {

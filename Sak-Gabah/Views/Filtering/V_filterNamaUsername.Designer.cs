@@ -1,6 +1,6 @@
 ﻿namespace Sak_Gabah.Views.Admin
 {
-    partial class Filter_Nama_Username
+    partial class V_filterNama
     {
         /// <summary>
         /// Required designer variable.
@@ -28,52 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Filter_Nama_Username));
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_filterNama));
+            batalbutton = new Button();
+            caributton = new Button();
+            namaUsernametextBox = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // batalbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(35, 154);
-            button1.Name = "button1";
-            button1.Size = new Size(142, 65);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
+            batalbutton.BackColor = Color.Transparent;
+            batalbutton.FlatAppearance.BorderSize = 0;
+            batalbutton.FlatStyle = FlatStyle.Flat;
+            batalbutton.Location = new Point(41, 188);
+            batalbutton.Name = "batalbutton";
+            batalbutton.Size = new Size(145, 70);
+            batalbutton.TabIndex = 0;
+            batalbutton.UseVisualStyleBackColor = false;
+            batalbutton.Click += batalbutton_Click;
             // 
-            // button2
+            // caributton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(195, 154);
-            button2.Name = "button2";
-            button2.Size = new Size(142, 65);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
+            caributton.BackColor = Color.Transparent;
+            caributton.FlatAppearance.BorderSize = 0;
+            caributton.FlatStyle = FlatStyle.Flat;
+            caributton.Location = new Point(217, 190);
+            caributton.Name = "caributton";
+            caributton.Size = new Size(144, 70);
+            caributton.TabIndex = 1;
+            caributton.UseVisualStyleBackColor = false;
+            caributton.Click += button2_Click;
             // 
-            // textBox1
+            // namaUsernametextBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(84, 73);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(206, 48);
-            textBox1.TabIndex = 2;
+            namaUsernametextBox.BorderStyle = BorderStyle.None;
+            namaUsernametextBox.Location = new Point(85, 90);
+            namaUsernametextBox.Multiline = true;
+            namaUsernametextBox.Name = "namaUsernametextBox";
+            namaUsernametextBox.Size = new Size(230, 52);
+            namaUsernametextBox.TabIndex = 2;
             // 
-            // Filter_Nama_Username
+            // V_filterNamaKomoditas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(371, 248);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "Filter_Nama_Username";
+            ClientSize = new Size(402, 299);
+            Controls.Add(namaUsernametextBox);
+            Controls.Add(caributton);
+            Controls.Add(batalbutton);
+            Name = "V_filterNamaKomoditas";
             Text = "Filter_Nama_Username";
             ResumeLayout(false);
             PerformLayout();
@@ -81,8 +85,8 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
+        private Button batalbutton;
+        private Button caributton;
+        private TextBox namaUsernametextBox;
     }
 }

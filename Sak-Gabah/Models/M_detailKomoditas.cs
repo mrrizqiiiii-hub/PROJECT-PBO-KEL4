@@ -6,7 +6,7 @@ namespace Sak_Gabah.Models
     {
         public string merk { get; set; }
         public int stok { get; set; }
-        public double harga { get; set; } 
+        public decimal harga { get; set; } 
         public bool status_aktif { get; set; } 
         public string deskripsi { get; set; }
         public int id_user { get; set; }

@@ -38,7 +38,8 @@ namespace Sak_Gabah.Controllers
                             {
                                 userResult = new M_user();
                                 userResult.id = Convert.ToInt32(reader["id_user"]);
-                                userResult.namaLengkap = reader["nama_lengkap"].ToString();
+                                userResult.namalengkap = reader["nama_lengkap"].ToString();
+                                userResult.username = reader["username_user"].ToString();
                                 userResult.role = reader["role"].ToString();
                                 userResult.statusAkun = "Aktif";
                             }
@@ -47,6 +48,65 @@ namespace Sak_Gabah.Controllers
                 }
             }
             return userResult;
+        }
+
+        public bool cekUsername(string username)
+        {
+            bool exist = false;
+            string query = "SELECT COUNT(*) FROM \"user\" WHERE username_user = @username;";
+
+            using (var conn = dbHelpers.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username.TrimStart().TrimEnd());
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    if (count > 0) exist = true;
+                }
+            }
+            return exist;
+        }
+
+        public bool RegistrasiUserBaru(M_user userBaru)
+        {
+            bool isSukses = false;
+            string query = @"
+                INSERT INTO ""user"" (email_user, username_user, password_user, role, status_akun) 
+                VALUES (@email, @username, @password, 'Supplier', 'Aktif');";
+
+            using (var conn = dbHelpers.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", userBaru.email.TrimStart().TrimEnd());
+                    cmd.Parameters.AddWithValue("@username", userBaru.username.Trim());
+                    cmd.Parameters.AddWithValue("@password", userBaru.password.TrimStart().TrimEnd());
+
+                    int barisTerpengaruh = cmd.ExecuteNonQuery();
+                    if (barisTerpengaruh > 0) isSukses = true;
+                }
+            }
+            return isSukses;
+        }
+
+        public bool cekEmail(string email)
+        {
+            bool exist = false;
+            string query = "SELECT COUNT(*) FROM \"user\" WHERE email_user = @email;";
+
+            using (var conn = dbHelpers.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    if (count > 0) exist = true;
+                }
+            }
+            return exist;
         }
 
     }

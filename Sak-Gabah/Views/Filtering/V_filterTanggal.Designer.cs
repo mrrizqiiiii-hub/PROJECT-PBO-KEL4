@@ -29,63 +29,72 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_filterTanggal));
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
+            batalbutton = new Button();
+            caributton = new Button();
+            tanggalAwalPicker = new DateTimePicker();
+            tanggalAkhirPicker = new DateTimePicker();
             SuspendLayout();
             // 
-            // button1
+            // batalbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(37, 162);
-            button1.Name = "button1";
-            button1.Size = new Size(148, 62);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
+            batalbutton.BackColor = Color.Transparent;
+            batalbutton.FlatStyle = FlatStyle.Flat;
+            batalbutton.ForeColor = Color.Transparent;
+            batalbutton.Location = new Point(40, 315);
+            batalbutton.Name = "batalbutton";
+            batalbutton.Size = new Size(154, 61);
+            batalbutton.TabIndex = 0;
+            batalbutton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // caributton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(204, 162);
-            button2.Name = "button2";
-            button2.Size = new Size(148, 62);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
+            caributton.BackColor = Color.Transparent;
+            caributton.FlatStyle = FlatStyle.Flat;
+            caributton.ForeColor = Color.Transparent;
+            caributton.Location = new Point(220, 314);
+            caributton.Name = "caributton";
+            caributton.Size = new Size(153, 61);
+            caributton.TabIndex = 1;
+            caributton.UseVisualStyleBackColor = false;
+            caributton.Click += caributton_Click;
             // 
-            // textBox1
+            // tanggalAwalPicker
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.ForeColor = Color.Transparent;
-            textBox1.Location = new Point(88, 74);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(206, 53);
-            textBox1.TabIndex = 2;
+            tanggalAwalPicker.CalendarFont = new Font("Century Gothic", 11.25F, FontStyle.Bold);
+            tanggalAwalPicker.Location = new Point(102, 95);
+            tanggalAwalPicker.Name = "tanggalAwalPicker";
+            tanggalAwalPicker.Size = new Size(210, 23);
+            tanggalAwalPicker.TabIndex = 2;
             // 
-            // FilterTanggal
+            // tanggalAkhirPicker
+            // 
+            tanggalAkhirPicker.CalendarFont = new Font("Century Gothic", 11.25F, FontStyle.Bold);
+            tanggalAkhirPicker.Location = new Point(102, 220);
+            tanggalAkhirPicker.Name = "tanggalAkhirPicker";
+            tanggalAkhirPicker.Size = new Size(210, 23);
+            tanggalAkhirPicker.TabIndex = 3;
+            // 
+            // V_filterTanggal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(385, 258);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "FilterTanggal";
+            ClientSize = new Size(413, 419);
+            Controls.Add(tanggalAkhirPicker);
+            Controls.Add(tanggalAwalPicker);
+            Controls.Add(caributton);
+            Controls.Add(batalbutton);
+            Name = "V_filterTanggal";
             Text = "FilterTanggal";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
+        private Button batalbutton;
+        private Button caributton;
+        private DateTimePicker tanggalAwalPicker;
+        private DateTimePicker tanggalAkhirPicker;
     }
 }

@@ -8,7 +8,7 @@ namespace Sak_Gabah.Models
     {
         public string namalengkap { get; set; }
         public string no_telpon { get; set; }
-        public  int id_kabupaten { get; set; }
-        public M_kabupaten kabupaten { get; set; } = new M_kabupaten();
+        public  int id_alamatLengkap { get; set; }
+        public M_alamatLengkap alamat { get; set; } = new M_alamatLengkap();
     }
 }

@@ -29,63 +29,107 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_register));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            emailtextBox = new TextBox();
+            usernametextBox = new TextBox();
+            passwordtextBox = new TextBox();
+            signInbutton = new Button();
+            signUpbutton = new Button();
+            visiblebutton = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // emailtextBox
             // 
-            textBox1.Location = new Point(572, 158);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 17);
-            textBox1.TabIndex = 0;
+            emailtextBox.BackColor = SystemColors.Menu;
+            emailtextBox.BorderStyle = BorderStyle.None;
+            emailtextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            emailtextBox.ForeColor = SystemColors.GrayText;
+            emailtextBox.Location = new Point(970, 258);
+            emailtextBox.Multiline = true;
+            emailtextBox.Name = "emailtextBox";
+            emailtextBox.PlaceholderText = "Email";
+            emailtextBox.Size = new Size(202, 28);
+            emailtextBox.TabIndex = 0;
             // 
-            // textBox2
+            // usernametextBox
             // 
-            textBox2.BackColor = Color.Silver;
-            textBox2.Location = new Point(572, 198);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(117, 21);
-            textBox2.TabIndex = 1;
+            usernametextBox.BackColor = SystemColors.Menu;
+            usernametextBox.BorderStyle = BorderStyle.None;
+            usernametextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            usernametextBox.ForeColor = SystemColors.GrayText;
+            usernametextBox.Location = new Point(970, 326);
+            usernametextBox.Multiline = true;
+            usernametextBox.Name = "usernametextBox";
+            usernametextBox.PlaceholderText = "Username";
+            usernametextBox.Size = new Size(202, 28);
+            usernametextBox.TabIndex = 0;
             // 
-            // textBox3
+            // passwordtextBox
             // 
-            textBox3.Location = new Point(572, 241);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(102, 21);
-            textBox3.TabIndex = 2;
-            textBox3.TextChanged += textBox3_TextChanged;
+            passwordtextBox.BackColor = SystemColors.Menu;
+            passwordtextBox.BorderStyle = BorderStyle.None;
+            passwordtextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            passwordtextBox.ForeColor = SystemColors.GrayText;
+            passwordtextBox.Location = new Point(970, 393);
+            passwordtextBox.Multiline = true;
+            passwordtextBox.Name = "passwordtextBox";
+            passwordtextBox.PasswordChar = '*';
+            passwordtextBox.PlaceholderText = "Password";
+            passwordtextBox.Size = new Size(163, 28);
+            passwordtextBox.TabIndex = 0;
             // 
-            // button1
+            // signInbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(560, 320);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 28);
-            button1.TabIndex = 3;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            signInbutton.BackColor = Color.Transparent;
+            signInbutton.FlatAppearance.BorderSize = 0;
+            signInbutton.FlatStyle = FlatStyle.Flat;
+            signInbutton.ForeColor = Color.Transparent;
+            signInbutton.Location = new Point(938, 594);
+            signInbutton.Name = "signInbutton";
+            signInbutton.Size = new Size(239, 34);
+            signInbutton.TabIndex = 3;
+            signInbutton.UseVisualStyleBackColor = false;
+            signInbutton.Click += signInbutton_Click;
             // 
-            // Register
+            // signUpbutton
+            // 
+            signUpbutton.BackColor = Color.Transparent;
+            signUpbutton.FlatAppearance.BorderSize = 0;
+            signUpbutton.FlatStyle = FlatStyle.Flat;
+            signUpbutton.ForeColor = Color.Transparent;
+            signUpbutton.Location = new Point(948, 520);
+            signUpbutton.Name = "signUpbutton";
+            signUpbutton.Size = new Size(214, 43);
+            signUpbutton.TabIndex = 3;
+            signUpbutton.UseVisualStyleBackColor = false;
+            signUpbutton.Click += signUpbutton_Click_1;
+            // 
+            // visiblebutton
+            // 
+            visiblebutton.BackColor = Color.Transparent;
+            visiblebutton.BackgroundImage = Properties.Resources.EyeClosed;
+            visiblebutton.BackgroundImageLayout = ImageLayout.Stretch;
+            visiblebutton.Location = new Point(1137, 389);
+            visiblebutton.Name = "visiblebutton";
+            visiblebutton.Size = new Size(35, 36);
+            visiblebutton.TabIndex = 4;
+            visiblebutton.UseVisualStyleBackColor = false;
+            visiblebutton.Click += visiblebutton_Click;
+            // 
+            // V_register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1350, 729);
+            Controls.Add(visiblebutton);
+            Controls.Add(signUpbutton);
+            Controls.Add(signInbutton);
+            Controls.Add(passwordtextBox);
+            Controls.Add(usernametextBox);
+            Controls.Add(emailtextBox);
             DoubleBuffered = true;
-            Name = "Register";
+            Name = "V_register";
             Load += Register_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -93,9 +137,11 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
+        private TextBox emailtextBox;
+        private TextBox usernametextBox;
+        private TextBox passwordtextBox;
+        private Button signInbutton;
+        private Button signUpbutton;
+        private Button visiblebutton;
     }
 }

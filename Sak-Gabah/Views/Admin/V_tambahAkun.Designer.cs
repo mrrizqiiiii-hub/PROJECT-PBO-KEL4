@@ -29,76 +29,90 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahAkun));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            usernametextBox = new TextBox();
+            namaKaryawantextBox = new TextBox();
+            nomorTelepontextBox = new TextBox();
+            batalbutton = new Button();
+            tambahbutton = new Button();
+            emailtextBox = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // usernametextBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(73, 45);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(188, 33);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            usernametextBox.BorderStyle = BorderStyle.None;
+            usernametextBox.Location = new Point(62, 53);
+            usernametextBox.Multiline = true;
+            usernametextBox.Name = "usernametextBox";
+            usernametextBox.Size = new Size(235, 29);
+            usernametextBox.TabIndex = 0;
             // 
-            // textBox2
+            // namaKaryawantextBox
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(73, 119);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(188, 33);
-            textBox2.TabIndex = 1;
+            namaKaryawantextBox.BorderStyle = BorderStyle.None;
+            namaKaryawantextBox.Location = new Point(62, 127);
+            namaKaryawantextBox.Multiline = true;
+            namaKaryawantextBox.Name = "namaKaryawantextBox";
+            namaKaryawantextBox.Size = new Size(235, 29);
+            namaKaryawantextBox.TabIndex = 1;
             // 
-            // textBox3
+            // nomorTelepontextBox
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(73, 190);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(188, 33);
-            textBox3.TabIndex = 2;
+            nomorTelepontextBox.BorderStyle = BorderStyle.None;
+            nomorTelepontextBox.Location = new Point(62, 201);
+            nomorTelepontextBox.Multiline = true;
+            nomorTelepontextBox.Name = "nomorTelepontextBox";
+            nomorTelepontextBox.Size = new Size(235, 29);
+            nomorTelepontextBox.TabIndex = 2;
             // 
-            // button1
+            // batalbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(27, 254);
-            button1.Name = "button1";
-            button1.Size = new Size(131, 52);
-            button1.TabIndex = 3;
-            button1.UseVisualStyleBackColor = false;
+            batalbutton.BackColor = Color.Transparent;
+            batalbutton.FlatAppearance.BorderSize = 0;
+            batalbutton.FlatStyle = FlatStyle.Flat;
+            batalbutton.ForeColor = Color.Transparent;
+            batalbutton.Location = new Point(36, 335);
+            batalbutton.Name = "batalbutton";
+            batalbutton.Size = new Size(129, 52);
+            batalbutton.TabIndex = 5;
+            batalbutton.UseVisualStyleBackColor = false;
+            batalbutton.Click += batalbutton_Click;
             // 
-            // button2
+            // tambahbutton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(174, 254);
-            button2.Name = "button2";
-            button2.Size = new Size(131, 52);
-            button2.TabIndex = 4;
-            button2.UseVisualStyleBackColor = false;
+            tambahbutton.BackColor = Color.Transparent;
+            tambahbutton.FlatAppearance.BorderSize = 0;
+            tambahbutton.FlatStyle = FlatStyle.Flat;
+            tambahbutton.ForeColor = Color.Transparent;
+            tambahbutton.Location = new Point(191, 335);
+            tambahbutton.Name = "tambahbutton";
+            tambahbutton.Size = new Size(129, 52);
+            tambahbutton.TabIndex = 6;
+            tambahbutton.UseVisualStyleBackColor = false;
+            tambahbutton.Click += tambahbutton_Click;
             // 
-            // TambahAkun
+            // emailtextBox
+            // 
+            emailtextBox.BorderStyle = BorderStyle.None;
+            emailtextBox.Location = new Point(62, 275);
+            emailtextBox.Multiline = true;
+            emailtextBox.Name = "emailtextBox";
+            emailtextBox.Size = new Size(235, 29);
+            emailtextBox.TabIndex = 7;
+            // 
+            // V_tambahAkun
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(331, 318);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Name = "TambahAkun";
+            ClientSize = new Size(356, 409);
+            Controls.Add(emailtextBox);
+            Controls.Add(batalbutton);
+            Controls.Add(tambahbutton);
+            Controls.Add(nomorTelepontextBox);
+            Controls.Add(namaKaryawantextBox);
+            Controls.Add(usernametextBox);
+            Name = "V_tambahAkun";
             Text = "TambahAkun";
             ResumeLayout(false);
             PerformLayout();
@@ -106,10 +120,11 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
-        private Button button2;
+        private TextBox usernametextBox;
+        private TextBox namaKaryawantextBox;
+        private TextBox nomorTelepontextBox;
+        private Button batalbutton;
+        private Button tambahbutton;
+        private TextBox emailtextBox;
     }
 }

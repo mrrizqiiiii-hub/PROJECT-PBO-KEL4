@@ -22,6 +22,15 @@
     <Compile Update="Views\Admin\V_kelolaKomoditas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\Supplier\V_editPengajuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_editPengajuanSetoran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Supplier\V_GantiPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\V_kelolaAkun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,7 +64,7 @@
     <Compile Update="Views\Karyawan\V_dashboardKaryawan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Karyawan\V_kelolaKomoditasKeluar.cs">
+    <Compile Update="Views\Karyawan\V_kelolaTransaksi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Karyawan\V_kelolaSupply.cs">
@@ -76,10 +85,28 @@
     <Compile Update="Views\Supplier\V_setorSupply.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuAkunKaryawan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\_UserControl\UC_kartuDetailKomoditas.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\_UserControl\UC_kartuKomoditas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuPengajuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuPengajuanSetor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuSetoran.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuTransaksi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\_UserControl\UC_kartuVerifikasiSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

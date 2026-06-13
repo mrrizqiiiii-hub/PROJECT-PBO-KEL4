@@ -54,13 +54,13 @@
             usernameTxtBox.BackColor = SystemColors.Control;
             usernameTxtBox.BorderStyle = BorderStyle.None;
             usernameTxtBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            usernameTxtBox.ForeColor = SystemColors.AppWorkspace;
+            usernameTxtBox.ForeColor = SystemColors.ControlDarkDark;
             usernameTxtBox.Location = new Point(965, 270);
             usernameTxtBox.Multiline = true;
             usernameTxtBox.Name = "usernameTxtBox";
+            usernameTxtBox.PlaceholderText = "Username";
             usernameTxtBox.Size = new Size(211, 29);
             usernameTxtBox.TabIndex = 0;
-            usernameTxtBox.Text = "Username";
             usernameTxtBox.TextChanged += textBox1_TextChanged;
             // 
             // passwordTxtBox
@@ -68,15 +68,15 @@
             passwordTxtBox.BackColor = SystemColors.Control;
             passwordTxtBox.BorderStyle = BorderStyle.None;
             passwordTxtBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            passwordTxtBox.ForeColor = SystemColors.AppWorkspace;
+            passwordTxtBox.ForeColor = SystemColors.ControlDarkDark;
             passwordTxtBox.Location = new Point(965, 348);
             passwordTxtBox.Multiline = true;
             passwordTxtBox.Name = "passwordTxtBox";
             passwordTxtBox.PasswordChar = '*';
+            passwordTxtBox.PlaceholderText = "Password";
             passwordTxtBox.Size = new Size(174, 29);
             passwordTxtBox.TabIndex = 0;
             passwordTxtBox.Tag = "";
-            passwordTxtBox.Text = "Password";
             passwordTxtBox.TextChanged += textBox1_TextChanged;
             // 
             // visiblebutton

@@ -29,122 +29,125 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahPengajuan));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
             textBox6 = new TextBox();
+            batalButton = new Button();
+            tambahbutton = new Button();
+            deskripsitextBox = new TextBox();
+            komoditascomboBox = new ComboBox();
+            hargatextBox = new TextBox();
+            merktextBox = new TextBox();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(58, 37);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(112, 22);
-            textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(58, 86);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(112, 22);
-            textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(58, 135);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(112, 22);
-            textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(58, 184);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(112, 22);
-            textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Location = new Point(58, 233);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(112, 22);
-            textBox5.TabIndex = 4;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(85, 271);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 51);
-            button1.TabIndex = 5;
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(219, 271);
-            button2.Name = "button2";
-            button2.Size = new Size(115, 51);
-            button2.TabIndex = 6;
-            button2.UseVisualStyleBackColor = false;
             // 
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Location = new Point(225, 38);
+            textBox6.Location = new Point(279, 56);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(164, 209);
+            textBox6.Size = new Size(199, 311);
             textBox6.TabIndex = 7;
             // 
-            // TambahPengajuan
+            // batalButton
+            // 
+            batalButton.BackColor = Color.Transparent;
+            batalButton.FlatAppearance.BorderSize = 0;
+            batalButton.FlatStyle = FlatStyle.Flat;
+            batalButton.Location = new Point(105, 400);
+            batalButton.Name = "batalButton";
+            batalButton.Size = new Size(137, 62);
+            batalButton.TabIndex = 24;
+            batalButton.UseVisualStyleBackColor = false;
+            batalButton.Click += batalButton_Click;
+            // 
+            // tambahbutton
+            // 
+            tambahbutton.BackColor = Color.Transparent;
+            tambahbutton.FlatAppearance.BorderSize = 0;
+            tambahbutton.FlatStyle = FlatStyle.Flat;
+            tambahbutton.Location = new Point(270, 399);
+            tambahbutton.Name = "tambahbutton";
+            tambahbutton.Size = new Size(137, 62);
+            tambahbutton.TabIndex = 24;
+            tambahbutton.UseVisualStyleBackColor = false;
+            tambahbutton.Click += tambahbutton_Click;
+            // 
+            // deskripsitextBox
+            // 
+            deskripsitextBox.BackColor = SystemColors.Window;
+            deskripsitextBox.BorderStyle = BorderStyle.None;
+            deskripsitextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deskripsitextBox.ForeColor = SystemColors.MenuText;
+            deskripsitextBox.Location = new Point(279, 56);
+            deskripsitextBox.Multiline = true;
+            deskripsitextBox.Name = "deskripsitextBox";
+            deskripsitextBox.Size = new Size(199, 311);
+            deskripsitextBox.TabIndex = 25;
+            // 
+            // komoditascomboBox
+            // 
+            komoditascomboBox.FormattingEnabled = true;
+            komoditascomboBox.Location = new Point(59, 86);
+            komoditascomboBox.Name = "komoditascomboBox";
+            komoditascomboBox.Size = new Size(157, 23);
+            komoditascomboBox.TabIndex = 26;
+            komoditascomboBox.SelectedIndexChanged += komoditascomboBox_SelectedIndexChanged;
+            // 
+            // hargatextBox
+            // 
+            hargatextBox.BackColor = SystemColors.Window;
+            hargatextBox.BorderStyle = BorderStyle.None;
+            hargatextBox.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            hargatextBox.ForeColor = SystemColors.MenuText;
+            hargatextBox.Location = new Point(48, 328);
+            hargatextBox.Multiline = true;
+            hargatextBox.Name = "hargatextBox";
+            hargatextBox.PlaceholderText = "HARGA";
+            hargatextBox.Size = new Size(180, 28);
+            hargatextBox.TabIndex = 27;
+            hargatextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // merktextBox
+            // 
+            merktextBox.BackColor = SystemColors.Window;
+            merktextBox.BorderStyle = BorderStyle.None;
+            merktextBox.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            merktextBox.ForeColor = SystemColors.MenuText;
+            merktextBox.Location = new Point(48, 200);
+            merktextBox.Multiline = true;
+            merktextBox.Name = "merktextBox";
+            merktextBox.PlaceholderText = "MERK";
+            merktextBox.Size = new Size(180, 28);
+            merktextBox.TabIndex = 27;
+            merktextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // V_tambahPengajuan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(426, 326);
+            ClientSize = new Size(525, 474);
+            Controls.Add(merktextBox);
+            Controls.Add(hargatextBox);
+            Controls.Add(komoditascomboBox);
+            Controls.Add(deskripsitextBox);
+            Controls.Add(tambahbutton);
+            Controls.Add(batalButton);
             Controls.Add(textBox6);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Name = "TambahPengajuan";
+            Name = "V_tambahPengajuan";
             Text = "TambahPengajuan";
+            Load += V_tambahPengajuan_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private Button button1;
-        private Button button2;
         private TextBox textBox6;
+        private Button batalButton;
+        private Button tambahbutton;
+        private TextBox deskripsitextBox;
+        private ComboBox komoditascomboBox;
+        private TextBox hargatextBox;
+        private TextBox merktextBox;
     }
 }

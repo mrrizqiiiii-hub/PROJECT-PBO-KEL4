@@ -1,4 +1,5 @@
 ﻿using Sak_Gabah.Controllers;
+using Sak_Gabah.Views.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,9 +62,10 @@ namespace Sak_Gabah.Views
 
         private void V_dashboardAdmin_Load(object sender, EventArgs e)
         {
-            string namaPengguna = Sak_Gabah.Helpers.UserSession.userAktif.namaLengkap;
+            string namaPengguna = Sak_Gabah.Helpers.UserSession.userAktif.namalengkap;
             string usernamePengguna = Sak_Gabah.Helpers.UserSession.userAktif.username;
             string rolePengguna = Sak_Gabah.Helpers.UserSession.userAktif.role;
+
             C_dashboard dashboardController = new C_dashboard();
             selamatDatanglabel.Text = $"Selamat Datang, {namaPengguna}";
             stokTotalLabel.Text = $"{dashboardController.ambilTotalStokGudang()}";
@@ -81,6 +83,12 @@ namespace Sak_Gabah.Views
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void kelolaAkunbutton_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun();
+            kelolaAkun.ShowDialog();
         }
     }
 }

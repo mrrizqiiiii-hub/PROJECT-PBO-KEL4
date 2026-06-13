@@ -29,134 +29,163 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahtransaksi));
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            customercomboBox = new ComboBox();
+            komoditascomboBox = new ComboBox();
+            merkcomboBox = new ComboBox();
+            metodeBayarcomboBox = new ComboBox();
+            namaCustomertextBox = new TextBox();
+            kuantitastextBox = new TextBox();
+            tambahbutton = new Button();
+            batalbutton = new Button();
+            noTelpontextBox = new TextBox();
+            alamattextBox = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // customercomboBox
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(73, 305);
-            button1.Name = "button1";
-            button1.Size = new Size(92, 34);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
+            customercomboBox.FormattingEnabled = true;
+            customercomboBox.Location = new Point(53, 102);
+            customercomboBox.Name = "customercomboBox";
+            customercomboBox.Size = new Size(158, 23);
+            customercomboBox.TabIndex = 0;
+            customercomboBox.SelectedIndexChanged += customercomboBox_SelectedIndexChanged;
             // 
-            // button2
+            // komoditascomboBox
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(221, 305);
-            button2.Name = "button2";
-            button2.Size = new Size(98, 34);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
+            komoditascomboBox.FormattingEnabled = true;
+            komoditascomboBox.Location = new Point(277, 199);
+            komoditascomboBox.Name = "komoditascomboBox";
+            komoditascomboBox.Size = new Size(158, 23);
+            komoditascomboBox.TabIndex = 1;
+            komoditascomboBox.SelectedIndexChanged += komoditascomboBox_SelectedIndexChanged;
             // 
-            // textBox1
+            // merkcomboBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(64, 78);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(110, 20);
-            textBox1.TabIndex = 2;
+            merkcomboBox.FormattingEnabled = true;
+            merkcomboBox.Location = new Point(277, 301);
+            merkcomboBox.Name = "merkcomboBox";
+            merkcomboBox.Size = new Size(158, 23);
+            merkcomboBox.TabIndex = 2;
             // 
-            // textBox2
+            // metodeBayarcomboBox
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(221, 32);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(110, 20);
-            textBox2.TabIndex = 3;
+            metodeBayarcomboBox.FormattingEnabled = true;
+            metodeBayarcomboBox.Location = new Point(277, 400);
+            metodeBayarcomboBox.Name = "metodeBayarcomboBox";
+            metodeBayarcomboBox.Size = new Size(158, 23);
+            metodeBayarcomboBox.TabIndex = 3;
             // 
-            // textBox3
+            // namaCustomertextBox
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(221, 78);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(110, 20);
-            textBox3.TabIndex = 4;
+            namaCustomertextBox.BackColor = SystemColors.Window;
+            namaCustomertextBox.BorderStyle = BorderStyle.None;
+            namaCustomertextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            namaCustomertextBox.ForeColor = SystemColors.MenuText;
+            namaCustomertextBox.Location = new Point(48, 196);
+            namaCustomertextBox.Multiline = true;
+            namaCustomertextBox.Name = "namaCustomertextBox";
+            namaCustomertextBox.Size = new Size(169, 33);
+            namaCustomertextBox.TabIndex = 4;
             // 
-            // textBox4
+            // kuantitastextBox
             // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(221, 124);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(110, 20);
-            textBox4.TabIndex = 5;
+            kuantitastextBox.BackColor = SystemColors.Window;
+            kuantitastextBox.BorderStyle = BorderStyle.None;
+            kuantitastextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kuantitastextBox.ForeColor = SystemColors.MenuText;
+            kuantitastextBox.Location = new Point(271, 95);
+            kuantitastextBox.Multiline = true;
+            kuantitastextBox.Name = "kuantitastextBox";
+            kuantitastextBox.Size = new Size(169, 33);
+            kuantitastextBox.TabIndex = 4;
             // 
-            // textBox5
+            // tambahbutton
             // 
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Location = new Point(221, 170);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(110, 20);
-            textBox5.TabIndex = 6;
+            tambahbutton.BackColor = Color.Transparent;
+            tambahbutton.BackgroundImageLayout = ImageLayout.Center;
+            tambahbutton.FlatAppearance.BorderSize = 0;
+            tambahbutton.FlatStyle = FlatStyle.Flat;
+            tambahbutton.ForeColor = Color.Transparent;
+            tambahbutton.Location = new Point(272, 465);
+            tambahbutton.Name = "tambahbutton";
+            tambahbutton.Size = new Size(137, 54);
+            tambahbutton.TabIndex = 5;
+            tambahbutton.UseVisualStyleBackColor = false;
+            tambahbutton.Click += tambahbutton_Click;
             // 
-            // textBox6
+            // batalbutton
             // 
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Location = new Point(221, 215);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(110, 20);
-            textBox6.TabIndex = 7;
+            batalbutton.BackColor = Color.Transparent;
+            batalbutton.BackgroundImageLayout = ImageLayout.Center;
+            batalbutton.FlatAppearance.BorderSize = 0;
+            batalbutton.FlatStyle = FlatStyle.Flat;
+            batalbutton.ForeColor = Color.Transparent;
+            batalbutton.Location = new Point(63, 465);
+            batalbutton.Name = "batalbutton";
+            batalbutton.Size = new Size(137, 54);
+            batalbutton.TabIndex = 5;
+            batalbutton.UseVisualStyleBackColor = false;
+            batalbutton.Click += batalbutton_Click;
             // 
-            // textBox7
+            // noTelpontextBox
             // 
-            textBox7.BorderStyle = BorderStyle.None;
-            textBox7.Location = new Point(221, 260);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(110, 20);
-            textBox7.TabIndex = 8;
+            noTelpontextBox.BackColor = SystemColors.Window;
+            noTelpontextBox.BorderStyle = BorderStyle.None;
+            noTelpontextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            noTelpontextBox.ForeColor = SystemColors.MenuText;
+            noTelpontextBox.Location = new Point(43, 296);
+            noTelpontextBox.Multiline = true;
+            noTelpontextBox.Name = "noTelpontextBox";
+            noTelpontextBox.Size = new Size(169, 33);
+            noTelpontextBox.TabIndex = 4;
             // 
-            // Tambahtransaksi
+            // alamattextBox
+            // 
+            alamattextBox.BackColor = SystemColors.Window;
+            alamattextBox.BorderStyle = BorderStyle.None;
+            alamattextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            alamattextBox.ForeColor = SystemColors.MenuText;
+            alamattextBox.Location = new Point(42, 395);
+            alamattextBox.Multiline = true;
+            alamattextBox.Name = "alamattextBox";
+            alamattextBox.Size = new Size(169, 33);
+            alamattextBox.TabIndex = 4;
+            // 
+            // V_tambahtransaksi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(390, 351);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "Tambahtransaksi";
+            ClientSize = new Size(473, 554);
+            Controls.Add(batalbutton);
+            Controls.Add(tambahbutton);
+            Controls.Add(kuantitastextBox);
+            Controls.Add(alamattextBox);
+            Controls.Add(noTelpontextBox);
+            Controls.Add(namaCustomertextBox);
+            Controls.Add(metodeBayarcomboBox);
+            Controls.Add(merkcomboBox);
+            Controls.Add(komoditascomboBox);
+            Controls.Add(customercomboBox);
+            Name = "V_tambahtransaksi";
             Text = "Tambahtransaksi";
+            Load += V_tambahtransaksi_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private ComboBox customercomboBox;
+        private ComboBox komoditascomboBox;
+        private ComboBox merkcomboBox;
+        private ComboBox metodeBayarcomboBox;
+        private TextBox namaCustomertextBox;
+        private TextBox kuantitastextBox;
+        private Button tambahbutton;
+        private Button batalbutton;
+        private TextBox noTelpontextBox;
+        private TextBox alamattextBox;
     }
 }

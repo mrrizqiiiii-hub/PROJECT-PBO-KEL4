@@ -1,6 +1,6 @@
 ﻿namespace Sak_Gabah.Views
 {
-    partial class Setor_Supplier
+    partial class V_setorSupply
     {
         /// <summary>
         /// Required designer variable.
@@ -28,63 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setor_Supplier));
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_setorSupply));
+            setoranLayoutPanel = new FlowLayoutPanel();
+            tambahSetoranbutton = new Button();
+            riwayatSetorbutton = new Button();
+            pengajuanSupplierButton = new Button();
+            dashboardButton = new Button();
             SuspendLayout();
             // 
-            // button1
+            // setoranLayoutPanel
             // 
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            setoranLayoutPanel.BackColor = Color.Transparent;
+            setoranLayoutPanel.Location = new Point(238, 12);
+            setoranLayoutPanel.Name = "setoranLayoutPanel";
+            setoranLayoutPanel.Size = new Size(1099, 603);
+            setoranLayoutPanel.TabIndex = 30;
             // 
-            // button2
+            // tambahSetoranbutton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(140, 380);
-            button2.Name = "button2";
-            button2.Size = new Size(123, 58);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
+            tambahSetoranbutton.BackColor = Color.Transparent;
+            tambahSetoranbutton.FlatAppearance.BorderSize = 0;
+            tambahSetoranbutton.FlatStyle = FlatStyle.Flat;
+            tambahSetoranbutton.Location = new Point(238, 624);
+            tambahSetoranbutton.Name = "tambahSetoranbutton";
+            tambahSetoranbutton.Size = new Size(203, 81);
+            tambahSetoranbutton.TabIndex = 26;
+            tambahSetoranbutton.UseVisualStyleBackColor = false;
+            tambahSetoranbutton.Click += tambahSetoranbutton_Click;
             // 
-            // button3
+            // riwayatSetorbutton
             // 
-            button3.BackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.Transparent;
-            button3.Location = new Point(290, 380);
-            button3.Name = "button3";
-            button3.Size = new Size(123, 58);
-            button3.TabIndex = 2;
-            button3.UseVisualStyleBackColor = false;
+            riwayatSetorbutton.BackColor = Color.Transparent;
+            riwayatSetorbutton.FlatAppearance.BorderSize = 0;
+            riwayatSetorbutton.FlatStyle = FlatStyle.Flat;
+            riwayatSetorbutton.Location = new Point(24, 205);
+            riwayatSetorbutton.Name = "riwayatSetorbutton";
+            riwayatSetorbutton.Size = new Size(130, 41);
+            riwayatSetorbutton.TabIndex = 27;
+            riwayatSetorbutton.UseVisualStyleBackColor = false;
+            riwayatSetorbutton.Click += riwayatSetorbutton_Click;
             // 
-            // Setor_Supplier
+            // pengajuanSupplierButton
+            // 
+            pengajuanSupplierButton.BackColor = Color.Transparent;
+            pengajuanSupplierButton.FlatAppearance.BorderSize = 0;
+            pengajuanSupplierButton.FlatStyle = FlatStyle.Flat;
+            pengajuanSupplierButton.Location = new Point(20, 110);
+            pengajuanSupplierButton.Name = "pengajuanSupplierButton";
+            pengajuanSupplierButton.Size = new Size(130, 41);
+            pengajuanSupplierButton.TabIndex = 28;
+            pengajuanSupplierButton.UseVisualStyleBackColor = false;
+            pengajuanSupplierButton.Click += pengajuanSupplierButton_Click;
+            // 
+            // dashboardButton
+            // 
+            dashboardButton.BackColor = Color.Transparent;
+            dashboardButton.FlatAppearance.BorderSize = 0;
+            dashboardButton.FlatStyle = FlatStyle.Flat;
+            dashboardButton.Location = new Point(21, 63);
+            dashboardButton.Name = "dashboardButton";
+            dashboardButton.Size = new Size(130, 41);
+            dashboardButton.TabIndex = 29;
+            dashboardButton.UseVisualStyleBackColor = false;
+            dashboardButton.Click += dashboardButton_Click;
+            // 
+            // V_setorSupply
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(1350, 729);
+            Controls.Add(setoranLayoutPanel);
+            Controls.Add(tambahSetoranbutton);
+            Controls.Add(riwayatSetorbutton);
+            Controls.Add(pengajuanSupplierButton);
+            Controls.Add(dashboardButton);
             DoubleBuffered = true;
-            Name = "Setor_Supplier";
+            Name = "V_setorSupply";
             Text = "Setor_Supplier";
+            Load += V_setorSupply_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private FlowLayoutPanel setoranLayoutPanel;
+        private Button tambahSetoranbutton;
+        private Button riwayatSetorbutton;
+        private Button pengajuanSupplierButton;
+        private Button dashboardButton;
     }
 }

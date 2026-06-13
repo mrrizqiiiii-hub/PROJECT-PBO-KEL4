@@ -23,7 +23,7 @@ namespace Sak_Gabah.Views._UserControl
 
         }
 
-        public void isiDataKartu(string merkKomoditas, double totalStok, double hargaKomoditas, string usernamePemilik, string deskripsiKomoditas)
+        public void isiDataKartu(string merkKomoditas, double totalStok, decimal hargaKomoditas, string usernamePemilik, string deskripsiKomoditas)
         {
             merkKomoditaslabel.Text = merkKomoditas.ToString();
             totalStoklabel.Text = totalStok.ToString();

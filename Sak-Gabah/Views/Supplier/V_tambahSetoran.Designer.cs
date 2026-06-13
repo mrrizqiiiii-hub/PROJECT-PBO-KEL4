@@ -29,77 +29,80 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_tambahSetoran));
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            batalbutton = new Button();
+            tambahbutton = new Button();
+            jumlahStoktextBox = new TextBox();
+            merkcomboBox = new ComboBox();
             SuspendLayout();
             // 
-            // button1
+            // batalbutton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(90, 226);
-            button1.Name = "button1";
-            button1.Size = new Size(128, 81);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
+            batalbutton.BackColor = Color.Transparent;
+            batalbutton.BackgroundImageLayout = ImageLayout.None;
+            batalbutton.FlatAppearance.BorderSize = 0;
+            batalbutton.FlatStyle = FlatStyle.Flat;
+            batalbutton.ForeColor = Color.Transparent;
+            batalbutton.Location = new Point(97, 226);
+            batalbutton.Name = "batalbutton";
+            batalbutton.Size = new Size(123, 60);
+            batalbutton.TabIndex = 0;
+            batalbutton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // tambahbutton
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(236, 226);
-            button2.Name = "button2";
-            button2.Size = new Size(134, 81);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
+            tambahbutton.BackColor = Color.Transparent;
+            tambahbutton.BackgroundImageLayout = ImageLayout.None;
+            tambahbutton.FlatAppearance.BorderSize = 0;
+            tambahbutton.FlatStyle = FlatStyle.Flat;
+            tambahbutton.ForeColor = Color.Transparent;
+            tambahbutton.Location = new Point(247, 226);
+            tambahbutton.Name = "tambahbutton";
+            tambahbutton.Size = new Size(123, 60);
+            tambahbutton.TabIndex = 1;
+            tambahbutton.UseVisualStyleBackColor = false;
+            tambahbutton.Click += tambahbutton_Click;
             // 
-            // textBox1
+            // jumlahStoktextBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(68, 56);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(328, 47);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            jumlahStoktextBox.BorderStyle = BorderStyle.None;
+            jumlahStoktextBox.Location = new Point(77, 151);
+            jumlahStoktextBox.Multiline = true;
+            jumlahStoktextBox.Name = "jumlahStoktextBox";
+            jumlahStoktextBox.Size = new Size(328, 43);
+            jumlahStoktextBox.TabIndex = 3;
             // 
-            // textBox2
+            // merkcomboBox
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(77, 148);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(328, 47);
-            textBox2.TabIndex = 3;
+            merkcomboBox.FormattingEnabled = true;
+            merkcomboBox.Location = new Point(77, 67);
+            merkcomboBox.Name = "merkcomboBox";
+            merkcomboBox.Size = new Size(328, 23);
+            merkcomboBox.TabIndex = 4;
             // 
-            // TambahSetoran
+            // V_tambahSetoran
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(476, 314);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "TambahSetoran";
+            Controls.Add(merkcomboBox);
+            Controls.Add(jumlahStoktextBox);
+            Controls.Add(tambahbutton);
+            Controls.Add(batalbutton);
+            Name = "V_tambahSetoran";
             Text = "TambahSetoran";
+            Load += V_tambahSetoran_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button batalbutton;
+        private Button tambahbutton;
+        private TextBox textBox;
+        private TextBox jumlahStoktextBox;
+        private ComboBox merkcomboBox;
     }
 }

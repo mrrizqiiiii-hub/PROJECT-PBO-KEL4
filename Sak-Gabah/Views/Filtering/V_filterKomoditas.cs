@@ -37,5 +37,10 @@ namespace Sak_Gabah.Views.Admin
         {
 
         }
+
+        private void batalbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

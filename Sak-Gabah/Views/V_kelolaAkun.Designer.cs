@@ -29,136 +29,147 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_kelolaAkun));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            emailtextBox = new TextBox();
+            kembalibutton = new Button();
+            gantiPasswordbutton = new Button();
+            simpanPerubahabutton = new Button();
+            alamattextBox = new TextBox();
+            noTelpontextBox = new TextBox();
+            namaLengkaptextBox = new TextBox();
+            usernametextBox = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // emailtextBox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(65, 163);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(119, 24);
-            textBox1.TabIndex = 0;
+            emailtextBox.BorderStyle = BorderStyle.None;
+            emailtextBox.Font = new Font("Century Gothic", 12F);
+            emailtextBox.Location = new Point(53, 198);
+            emailtextBox.Multiline = true;
+            emailtextBox.Name = "emailtextBox";
+            emailtextBox.Size = new Size(155, 34);
+            emailtextBox.TabIndex = 0;
+            emailtextBox.Text = "Blabla@gmail.com";
+            emailtextBox.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox2
+            // kembalibutton
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(65, 217);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(119, 23);
-            textBox2.TabIndex = 3;
+            kembalibutton.BackColor = Color.Transparent;
+            kembalibutton.FlatAppearance.BorderSize = 0;
+            kembalibutton.FlatStyle = FlatStyle.Flat;
+            kembalibutton.ForeColor = Color.Transparent;
+            kembalibutton.Location = new Point(71, 437);
+            kembalibutton.Name = "kembalibutton";
+            kembalibutton.Size = new Size(98, 44);
+            kembalibutton.TabIndex = 8;
+            kembalibutton.UseVisualStyleBackColor = false;
+            kembalibutton.Click += kembalibutton_Click;
             // 
-            // textBox3
+            // gantiPasswordbutton
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(65, 279);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(119, 20);
-            textBox3.TabIndex = 4;
+            gantiPasswordbutton.BackColor = Color.Transparent;
+            gantiPasswordbutton.FlatAppearance.BorderSize = 0;
+            gantiPasswordbutton.FlatStyle = FlatStyle.Flat;
+            gantiPasswordbutton.ForeColor = Color.Transparent;
+            gantiPasswordbutton.Location = new Point(184, 438);
+            gantiPasswordbutton.Name = "gantiPasswordbutton";
+            gantiPasswordbutton.Size = new Size(98, 44);
+            gantiPasswordbutton.TabIndex = 9;
+            gantiPasswordbutton.UseVisualStyleBackColor = false;
+            gantiPasswordbutton.Click += gantiPasswordbutton_Click;
             // 
-            // textBox4
+            // simpanPerubahabutton
             // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(229, 163);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(110, 24);
-            textBox4.TabIndex = 5;
+            simpanPerubahabutton.BackColor = Color.Transparent;
+            simpanPerubahabutton.FlatAppearance.BorderSize = 0;
+            simpanPerubahabutton.FlatStyle = FlatStyle.Flat;
+            simpanPerubahabutton.ForeColor = Color.Transparent;
+            simpanPerubahabutton.Location = new Point(303, 438);
+            simpanPerubahabutton.Name = "simpanPerubahabutton";
+            simpanPerubahabutton.Size = new Size(98, 44);
+            simpanPerubahabutton.TabIndex = 10;
+            simpanPerubahabutton.UseVisualStyleBackColor = false;
+            simpanPerubahabutton.Click += simpanPerubahabutton_Click;
             // 
-            // textBox5
+            // alamattextBox
             // 
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Location = new Point(229, 217);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(110, 23);
-            textBox5.TabIndex = 6;
+            alamattextBox.BorderStyle = BorderStyle.None;
+            alamattextBox.Font = new Font("Century Gothic", 12F);
+            alamattextBox.Location = new Point(53, 361);
+            alamattextBox.Multiline = true;
+            alamattextBox.Name = "alamattextBox";
+            alamattextBox.Size = new Size(368, 34);
+            alamattextBox.TabIndex = 0;
+            alamattextBox.Text = "Tegal Besar";
+            alamattextBox.TextAlign = HorizontalAlignment.Center;
+            alamattextBox.TextChanged += textBox2_TextChanged;
             // 
-            // textBox6
+            // noTelpontextBox
             // 
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Location = new Point(229, 276);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(110, 23);
-            textBox6.TabIndex = 7;
+            noTelpontextBox.BorderStyle = BorderStyle.None;
+            noTelpontextBox.Font = new Font("Century Gothic", 12F);
+            noTelpontextBox.Location = new Point(273, 277);
+            noTelpontextBox.Multiline = true;
+            noTelpontextBox.Name = "noTelpontextBox";
+            noTelpontextBox.Size = new Size(155, 34);
+            noTelpontextBox.TabIndex = 0;
+            noTelpontextBox.Text = "0852";
+            noTelpontextBox.TextAlign = HorizontalAlignment.Center;
             // 
-            // button1
+            // namaLengkaptextBox
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(54, 355);
-            button1.Name = "button1";
-            button1.Size = new Size(98, 44);
-            button1.TabIndex = 8;
-            button1.UseVisualStyleBackColor = false;
+            namaLengkaptextBox.BorderStyle = BorderStyle.None;
+            namaLengkaptextBox.Font = new Font("Century Gothic", 12F);
+            namaLengkaptextBox.Location = new Point(273, 198);
+            namaLengkaptextBox.Multiline = true;
+            namaLengkaptextBox.Name = "namaLengkaptextBox";
+            namaLengkaptextBox.Size = new Size(155, 34);
+            namaLengkaptextBox.TabIndex = 0;
+            namaLengkaptextBox.Text = "Nabil Amin";
+            namaLengkaptextBox.TextAlign = HorizontalAlignment.Center;
             // 
-            // button2
+            // usernametextBox
             // 
-            button2.BackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(149, 355);
-            button2.Name = "button2";
-            button2.Size = new Size(98, 44);
-            button2.TabIndex = 9;
-            button2.UseVisualStyleBackColor = false;
+            usernametextBox.BorderStyle = BorderStyle.None;
+            usernametextBox.Font = new Font("Century Gothic", 12F);
+            usernametextBox.Location = new Point(53, 277);
+            usernametextBox.Multiline = true;
+            usernametextBox.Name = "usernametextBox";
+            usernametextBox.Size = new Size(155, 34);
+            usernametextBox.TabIndex = 11;
+            usernametextBox.Text = "Abing";
+            usernametextBox.TextAlign = HorizontalAlignment.Center;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.Transparent;
-            button3.Location = new Point(253, 355);
-            button3.Name = "button3";
-            button3.Size = new Size(98, 44);
-            button3.TabIndex = 10;
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // KelolaAkun
+            // V_kelolaAkun
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(406, 423);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Name = "KelolaAkun";
+            ClientSize = new Size(472, 516);
+            Controls.Add(usernametextBox);
+            Controls.Add(simpanPerubahabutton);
+            Controls.Add(gantiPasswordbutton);
+            Controls.Add(kembalibutton);
+            Controls.Add(alamattextBox);
+            Controls.Add(namaLengkaptextBox);
+            Controls.Add(noTelpontextBox);
+            Controls.Add(emailtextBox);
+            Name = "V_kelolaAkun";
             Text = "KelolaAkun";
+            Load += V_kelolaAkun_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private TextBox emailtextBox;
+        private Button kembalibutton;
+        private Button gantiPasswordbutton;
+        private Button simpanPerubahabutton;
+        private TextBox alamattextBox;
+        private TextBox noTelpontextBox;
+        private TextBox namaLengkaptextBox;
+        private TextBox usernametextBox;
     }
 }
