@@ -41,7 +41,7 @@
             // 
             merktextBox.BackColor = SystemColors.Window;
             merktextBox.BorderStyle = BorderStyle.None;
-            merktextBox.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            merktextBox.Font = new Font("Century Gothic", 12F);
             merktextBox.ForeColor = SystemColors.MenuText;
             merktextBox.Location = new Point(45, 203);
             merktextBox.Multiline = true;
@@ -55,7 +55,7 @@
             // 
             hargatextBox.BackColor = SystemColors.Window;
             hargatextBox.BorderStyle = BorderStyle.None;
-            hargatextBox.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            hargatextBox.Font = new Font("Century Gothic", 12F);
             hargatextBox.ForeColor = SystemColors.MenuText;
             hargatextBox.Location = new Point(46, 335);
             hargatextBox.Multiline = true;
@@ -78,7 +78,7 @@
             // 
             deskripsitextBox.BackColor = SystemColors.Window;
             deskripsitextBox.BorderStyle = BorderStyle.None;
-            deskripsitextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deskripsitextBox.Font = new Font("Century Gothic", 12F);
             deskripsitextBox.ForeColor = SystemColors.MenuText;
             deskripsitextBox.Location = new Point(273, 58);
             deskripsitextBox.Multiline = true;

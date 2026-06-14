@@ -7,16 +7,15 @@ using System.Text;
 
 namespace Sak_Gabah.Controllers
 {
-    public class C_dashboard
+    public class C_dashboard : C_baseController
     {
         public double ambilTotalStokGudang()
         {
             double totalStok = 0;
-            string query = "SELECT SUM(stok) FROM detail_komoditas";
+            string query = "SELECT SUM(stok) FROM detail_komoditas WHERE status_aktif = '1'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var result = cmd.ExecuteScalar();
@@ -32,11 +31,10 @@ namespace Sak_Gabah.Controllers
         public double ambilTotalPenjualan()
         {
             double totalPenjualan = 0;
-            string query = "SELECT COUNT(Id_transaksi) FROM Transaksi";
+            string query = "SELECT COUNT(Id_transaksi) FROM Transaksi WHERE status_transaksi = 'Selesai'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var result = cmd.ExecuteScalar();
@@ -54,9 +52,8 @@ namespace Sak_Gabah.Controllers
             double totalVerifikasi = 0;
             string query = "SELECT count(id_pengajuan) FROM pengajuan_komoditas WHERE status_pengajuan = 'Pending'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var result = cmd.ExecuteScalar();
@@ -77,9 +74,8 @@ namespace Sak_Gabah.Controllers
                 FROM setoran
                 WHERE status_setoran = 'Pending'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var result = cmd.ExecuteScalar();
@@ -100,9 +96,8 @@ namespace Sak_Gabah.Controllers
                 FROM transaksi
                 WHERE status_transaksi = 'Pending'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var result = cmd.ExecuteScalar();
@@ -118,12 +113,10 @@ namespace Sak_Gabah.Controllers
         public double ambilTotalStokGudang(int id)
         {
             double totalStok = 0;
-            string query = "SELECT SUM(stok) FROM detail_komoditas WHERE id_user = @id";
+            string query = "SELECT SUM(stok) FROM detail_komoditas WHERE id_user = @id AND status_aktif = '1'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
@@ -143,10 +136,8 @@ namespace Sak_Gabah.Controllers
             double totalStok = 0;
             string query = "SELECT COUNT(id_pengajuan) FROM pengajuan_komoditas WHERE status_pengajuan = 'PENDING' AND id_user = @id";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
@@ -167,10 +158,8 @@ namespace Sak_Gabah.Controllers
             double totalStok = 0;
             string query = "SELECT count(id_setoran) FROM setoran JOIN detail_komoditas USING (id_detail_komoditas) WHERE id_user = @id AND status_setoran = 'Proses' ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);

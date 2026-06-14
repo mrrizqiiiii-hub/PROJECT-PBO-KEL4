@@ -1,4 +1,5 @@
 ﻿using Sak_Gabah.Controllers;
+using Sak_Gabah.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,21 +24,23 @@ namespace Sak_Gabah.Views.Admin
 
         private void tambahbutton_Click(object sender, EventArgs e)
         {
-            string inputNama = namaKomoditastextBox.Text.TrimStart().TrimEnd();
-            double inputMaksimalStok = Convert.ToDouble(maksimalStoktextBox.Text);
-            double inputMaksimalSupplier = Convert.ToDouble(maksimalSuppliertextBox.Text);
+            M_komoditas dataKomoditas = new M_komoditas();
+
+            dataKomoditas.nama_komoditas = namaKomoditastextBox.Text.TrimStart().TrimEnd();
+            dataKomoditas.maksimal_stok = Convert.ToInt32(maksimalStoktextBox.Text);
+            dataKomoditas.maksimal_supplier = Convert.ToInt32(maksimalSuppliertextBox.Text);
 
             C_komoditas kontrolKomoditas = new C_komoditas();
 
-            if (kontrolKomoditas.cekDuplikat(inputNama))
+            if (kontrolKomoditas.cekDuplikat(namaKomoditastextBox.Text))
             {
                 MessageBox.Show
-                    ($"Komoditas dengan nama '{inputNama}' sudah ada di sistem! Silakan gunakan nama lain.",
+                    ($"Komoditas dengan nama '{namaKomoditastextBox.Text}' sudah ada di sistem! Silakan gunakan nama lain.",
                       "Data Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            bool sukses = kontrolKomoditas.tambahDataKomoditas(inputMaksimalStok, inputMaksimalSupplier, inputNama);
+            bool sukses = kontrolKomoditas.TambahData(dataKomoditas);
 
             if (sukses)
             {

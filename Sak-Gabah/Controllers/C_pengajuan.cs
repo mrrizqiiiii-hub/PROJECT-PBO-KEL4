@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using Microsoft.VisualBasic.Devices;
 using Npgsql;
+using Sak_Gabah.Controllers.Interface;
 using Sak_Gabah.Helpers;
 using Sak_Gabah.Models;
 using System;
@@ -9,9 +10,9 @@ using System.Text;
 
 namespace Sak_Gabah.Controllers
 {
-    internal class C_pengajuan
+    internal class C_pengajuan : C_baseController, IControllerBaca<M_pengajuanKomoditas>, IControllerTambah<M_pengajuanKomoditas>, IControllerHapus
     {
-        public List<M_pengajuanKomoditas> ambilDataPengajuan()
+        public List<M_pengajuanKomoditas> AmbilData()
         {
             List<M_pengajuanKomoditas> listPengajuan = new List<M_pengajuanKomoditas>();
 
@@ -31,9 +32,8 @@ namespace Sak_Gabah.Controllers
                 "JOIN komoditas k USING (id_komoditas) " +
                 "WHERE pk.status_pengajuan ILIKE 'Pending'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var reader = cmd.ExecuteReader();
@@ -57,7 +57,7 @@ namespace Sak_Gabah.Controllers
             return listPengajuan;
         }
 
-        public List<M_pengajuanKomoditas> ambilDataPengajuan(string keyword)
+        public List<M_pengajuanKomoditas> AmbilData(string keyword)
         {
             List<M_pengajuanKomoditas> listPengajuan = new List<M_pengajuanKomoditas>();
 
@@ -77,9 +77,8 @@ namespace Sak_Gabah.Controllers
                 "JOIN komoditas k USING (id_komoditas) " +
                 "WHERE pk.status_pengajuan ILIKE 'Pending' AND (k.merk ILIKE @keyword OR u.username_user ILIKE @keyword)";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 
@@ -106,7 +105,7 @@ namespace Sak_Gabah.Controllers
             return listPengajuan;
         }
 
-        public List<M_pengajuanKomoditas> ambilDataPengajuan(int id)
+        public List<M_pengajuanKomoditas> AmbilData(int id)
         {
             List<M_pengajuanKomoditas> listPengajuan = new List<M_pengajuanKomoditas>();
 
@@ -126,9 +125,8 @@ namespace Sak_Gabah.Controllers
                 "JOIN komoditas k USING (id_komoditas) " +
                 "WHERE pk.status_pengajuan ILIKE 'Pending' AND u.id_user = @id";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
@@ -165,12 +163,10 @@ namespace Sak_Gabah.Controllers
 
             string queryInsert = @"
                 INSERT INTO detail_komoditas (id_user, id_komoditas, merk, harga, stok, status_aktif, deskripsi) 
-                VALUES (@idUser, @idKomoditas, @merk, @harga, 0, '1', @deskripsi)"; 
+                VALUES (@idUser, @idKomoditas, @merk, @harga, 0, '1', @deskripsi)";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
-
                 using (var transaksi = conn.BeginTransaction())
                 {
 
@@ -210,9 +206,8 @@ namespace Sak_Gabah.Controllers
                 SET status_pengajuan = 'DITOLAK ' 
                 WHERE id_pengajuan = @idPengajuan ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@idPengajuan", dataPengajuan.id);
@@ -230,7 +225,7 @@ namespace Sak_Gabah.Controllers
         }
     
 
-        public bool tambahPengajuan(M_pengajuanKomoditas dataBaru)
+        public bool TambahData(M_pengajuanKomoditas dataBaru)
         {
             bool isSukses = false;
 
@@ -238,9 +233,8 @@ namespace Sak_Gabah.Controllers
                 INSERT INTO pengajuan_komoditas (merk, harga, deskripsi, status_pengajuan, id_komoditas, id_user)
                 VALUES (@merk, @harga, @deskripsi, 'PENDING', @idKomoditas, @idUser)";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@merk", dataBaru.merk);
@@ -270,9 +264,8 @@ namespace Sak_Gabah.Controllers
                     id_komoditas = @idKomoditas
                 WHERE id_pengajuan = @idPengajuan;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 
@@ -293,16 +286,15 @@ namespace Sak_Gabah.Controllers
             return isSukses;
         }
 
-        public bool deletePengajuan(int id)
+        public bool HapusData(int id)
         {
             bool isSukses = false;
 
             string query = @"
                 DELETE FROM pengajuan_komoditas WHERE id_pengajuan = @id";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 

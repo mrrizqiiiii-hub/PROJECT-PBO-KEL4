@@ -65,21 +65,21 @@ namespace Sak_Gabah.Views
         private void tampilkanData()
         {
             C_penjualan kontroller = new C_penjualan();
-            List<M_detailTransaksi> dataMentah = kontroller.ambilDataPenjualan();
+            List<M_detailTransaksi> dataMentah = kontroller.AmbilData();
 
             if (this.tanggalAwal != default(DateOnly) && this.tanggalAkhir != default(DateOnly))
             {
-                dataMentah = kontroller.ambilDataPenjualan(this.tanggalAwal, this.tanggalAkhir);
+                dataMentah = kontroller.AmbilData(this.tanggalAwal, this.tanggalAkhir);
             }
 
             else if (!string.IsNullOrWhiteSpace(this.namaKomoditas))
             {
-                dataMentah = kontroller.ambilDataPenjualan(this.namaKomoditas);
+                dataMentah = kontroller.AmbilData(this.namaKomoditas);
             }
 
             else
             {
-                dataMentah = kontroller.ambilDataPenjualan();
+                dataMentah = kontroller.AmbilData();
             }
 
             if (dataMentah.Count == 0)
@@ -97,7 +97,7 @@ namespace Sak_Gabah.Views
                 TotalHarga = data.transaksi.total_harga,
                 Nama_Pelayan = data.transaksi.user.username,
                 Nama_Customer = data.transaksi.customer.namalengkap,
-                }).ToList();
+            }).ToList();
 
             penjualanGridView.DataSource = dataRata;
         }
@@ -121,6 +121,12 @@ namespace Sak_Gabah.Views
                 this.namaKomoditas = filterKomoditas.keyWord;
                 this.tampilkanData();
             }
+        }
+
+        private void kelolaAkunbutton_Click_1(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

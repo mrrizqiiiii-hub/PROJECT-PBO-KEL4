@@ -70,12 +70,12 @@ namespace Sak_Gabah.Views
 
             if (!string.IsNullOrWhiteSpace(this.namaKomoditas))
             {
-                daftarData = controller.ambilDataPenjualan(this.namaKomoditas);
+                daftarData = controller.AmbilData(this.namaKomoditas);
             }
 
             else
             {
-                daftarData = controller.ambilDataPenjualan();
+                daftarData = controller.AmbilData();
             }
 
             if (daftarData.Count == 0)

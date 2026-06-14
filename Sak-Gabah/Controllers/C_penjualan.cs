@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.Devices;
 using Npgsql;
+using Sak_Gabah.Controllers.Interface;
 using Sak_Gabah.Helpers;
 using Sak_Gabah.Models;
 using System;
@@ -8,9 +9,9 @@ using System.Text;
 
 namespace Sak_Gabah.Controllers
 {
-    internal class C_penjualan
+    internal class C_penjualan : C_baseController, IControllerBaca<M_detailTransaksi>
     {
-        public List<M_detailTransaksi> ambilDataPenjualan()
+        public List<M_detailTransaksi> AmbilData()
         {
             List<M_detailTransaksi> listPenjualan = new List<M_detailTransaksi>();
 
@@ -29,9 +30,8 @@ namespace Sak_Gabah.Controllers
                 "JOIN customer c USING (id_customer) " +
                 "JOIN \"user\" u ON t.id_user = u.id_user;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var reader = cmd.ExecuteReader();
@@ -53,7 +53,7 @@ namespace Sak_Gabah.Controllers
             return listPenjualan;
         }
 
-        public List<M_detailTransaksi> ambilDataPenjualan(DateOnly tanggalAwal, DateOnly tanggalAkhir)
+        public List<M_detailTransaksi> AmbilData(DateOnly tanggalAwal, DateOnly tanggalAkhir)
         {
             List<M_detailTransaksi> listPenjualan = new List<M_detailTransaksi>();
 
@@ -73,9 +73,8 @@ namespace Sak_Gabah.Controllers
                 "JOIN \"user\" u ON t.id_user = u.id_user " +
                 "WHERE t.tanggal_transaksi BETWEEN @tanggalAwal AND @tanggalAkhir  ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 
@@ -102,7 +101,7 @@ namespace Sak_Gabah.Controllers
 
         }
 
-        public List<M_detailTransaksi> ambilDataPenjualan(string namaKomoditas)
+        public List<M_detailTransaksi> AmbilData(string namaKomoditas)
         {
             List<M_detailTransaksi> listPenjualan = new List<M_detailTransaksi>();
 
@@ -122,9 +121,8 @@ namespace Sak_Gabah.Controllers
                 "JOIN \"user\" u ON t.id_user = u.id_user " +
                 "WHERE LOWER(dk.merk) LIKE LOWER(@keyword) ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 
@@ -156,9 +154,8 @@ namespace Sak_Gabah.Controllers
             List<M_customer> list = new List<M_customer>();
             string query = "SELECT id_customer, nama_customer, no_telpon, alamat kabupaten FROM customer ORDER BY nama_customer ASC;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -197,9 +194,8 @@ namespace Sak_Gabah.Controllers
                 SET nama_customer = @namaCustomer, no_telpon = @noTelpon, alamat = @alamat
                 WHERE id_customer = @id;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var tran = conn.BeginTransaction())
                 {
                     try
@@ -276,9 +272,8 @@ namespace Sak_Gabah.Controllers
                 JOIN komoditas k USING (id_komoditas)
                 WHERE t.status_transaksi ILIKE 'Pending'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var reader = cmd.ExecuteReader();
@@ -324,9 +319,8 @@ namespace Sak_Gabah.Controllers
                 JOIN komoditas k USING (id_komoditas)
                 WHERE t.status_transaksi ILIKE 'Pending' AND k.nama_komoditas ILIKE @keyword ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
@@ -366,9 +360,8 @@ namespace Sak_Gabah.Controllers
                 SET stok = stok - @kuantitas 
                 WHERE id_detail_komoditas = @idDetailKomoditas;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var tran = conn.BeginTransaction())
                 {
                     try
@@ -410,9 +403,8 @@ namespace Sak_Gabah.Controllers
                 SET status_transaksi = 'Dibatalkan' 
                 WHERE id_transaksi = @idTransaksi ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@idTransaksi", dataSetor.id);

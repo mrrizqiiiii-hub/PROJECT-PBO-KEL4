@@ -53,7 +53,7 @@
             // 
             usernameTxtBox.BackColor = SystemColors.Control;
             usernameTxtBox.BorderStyle = BorderStyle.None;
-            usernameTxtBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            usernameTxtBox.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             usernameTxtBox.ForeColor = SystemColors.ControlDarkDark;
             usernameTxtBox.Location = new Point(965, 270);
             usernameTxtBox.Multiline = true;
@@ -67,7 +67,7 @@
             // 
             passwordTxtBox.BackColor = SystemColors.Control;
             passwordTxtBox.BorderStyle = BorderStyle.None;
-            passwordTxtBox.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            passwordTxtBox.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             passwordTxtBox.ForeColor = SystemColors.ControlDarkDark;
             passwordTxtBox.Location = new Point(965, 348);
             passwordTxtBox.Multiline = true;

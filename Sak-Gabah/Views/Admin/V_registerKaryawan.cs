@@ -89,11 +89,11 @@ namespace Sak_Gabah.Views
 
             if (!string.IsNullOrWhiteSpace(this.keyword))
             {
-                daftarData = kontroller.ambilUser(this.keyword);
+                daftarData = kontroller.AmbilData(this.keyword);
             }
             else
             {
-                daftarData = kontroller.ambilUser();
+                daftarData = kontroller.AmbilData();
             }
 
             if (daftarData.Count == 0)
@@ -115,7 +115,10 @@ namespace Sak_Gabah.Views
 
 
         }
-
-
+        private void kelolaAkunbutton_Click_1(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
+        }
     }
 }

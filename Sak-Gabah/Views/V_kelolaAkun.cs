@@ -13,12 +13,14 @@ namespace Sak_Gabah.Views.Admin
 {
     public partial class V_kelolaAkun : Form
     {
-        public V_kelolaAkun()
+        public V_kelolaAkun(Form formPengirim)
         {
             InitializeComponent();
+
+            this._formUtama = formPengirim;
         }
 
-
+        private Form _formUtama;
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -26,11 +28,12 @@ namespace Sak_Gabah.Views.Admin
         }
 
         C_kelolaAkun kelolaAkun = new C_kelolaAkun();
+        C_authLogin authController = new C_authLogin();
         private void V_kelolaAkun_Load(object sender, EventArgs e)
         {
             
 
-            M_user dataProfil = kelolaAkun.ambilUser(Helpers.UserSession.userAktif.id);
+            M_user dataProfil = kelolaAkun.AmbilData(Helpers.UserSession.userAktif.id);
 
             usernametextBox.Text = dataProfil.username;
             namaLengkaptextBox.Text = dataProfil.namalengkap;
@@ -43,6 +46,25 @@ namespace Sak_Gabah.Views.Admin
         private void simpanPerubahabutton_Click(object sender, EventArgs e)
         {
             bool berhasil = kelolaAkun.updateAkun(emailtextBox.Text, usernametextBox.Text, namaLengkaptextBox.Text, noTelpontextBox.Text, alamattextBox.Text, Helpers.UserSession.userAktif.id);
+
+            if (string.IsNullOrWhiteSpace(usernametextBox.Text) || string.IsNullOrWhiteSpace(namaLengkaptextBox.Text) || string.IsNullOrWhiteSpace(emailtextBox.Text) || string.IsNullOrWhiteSpace(alamattextBox.Text) || string.IsNullOrWhiteSpace(noTelpontextBox.Text))
+            {
+                MessageBox.Show("Mohon lengkapi data akun!", "Validasi Gagal");
+                return;
+            }
+
+            if (authController.cekUsername(usernametextBox.Text))
+            {
+                MessageBox.Show($"Username '{usernametextBox.Text}' sudah digunakan oleh orang lain. Silakan cari nama unik yang berbeda!", "Username Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            if (authController.cekEmail(emailtextBox.Text))
+            {
+                MessageBox.Show($"Email '{emailtextBox.Text}' sudah pernah didaftarkan pada akun lain. Silakan gunakan email yang berbeda!",
+                                "Email Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
 
             if (berhasil)
             {
@@ -59,7 +81,14 @@ namespace Sak_Gabah.Views.Admin
 
         private void kembalibutton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            V_halamanLogin halamanLogin = new V_halamanLogin();
+
+            if (this._formUtama != null)
+            {
+                this._formUtama.Close();
+            }
+
+            halamanLogin.Show();
         }
     }
 }

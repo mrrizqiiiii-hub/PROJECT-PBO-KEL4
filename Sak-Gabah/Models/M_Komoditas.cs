@@ -9,5 +9,6 @@ namespace Sak_Gabah.Models
         public int maksimal_supplier { get; set; }
         public int jumlahSupplier { get; set; }
         public int totalStok { get; set; }
+        public string statusAktif { get; set; }
     }
 }

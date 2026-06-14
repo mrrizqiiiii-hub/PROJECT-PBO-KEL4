@@ -65,7 +65,7 @@ namespace Sak_Gabah.Views
 
         private void filterSupplierbutton_Click(object sender, EventArgs e)
         {
-            V_filterNama filterNamaKomoditas = new V_filterNama(); 
+            V_filterNama filterNamaKomoditas = new V_filterNama();
             if (filterNamaKomoditas.ShowDialog() == DialogResult.OK)
             {
                 this.keyword = filterNamaKomoditas.keyWord;
@@ -93,11 +93,11 @@ namespace Sak_Gabah.Views
 
             if (!string.IsNullOrWhiteSpace(this.keyword))
             {
-                daftarData = controller.ambilDataPengajuan(this.keyword);
+                daftarData = controller.AmbilData(this.keyword);
             }
             else
             {
-                daftarData = controller.ambilDataPengajuan();
+                daftarData = controller.AmbilData();
             }
 
             if (daftarData.Count == 0)
@@ -106,7 +106,7 @@ namespace Sak_Gabah.Views
                 return;
             }
 
-            daftarData = controller.ambilDataPengajuan();
+            daftarData = controller.AmbilData();
 
             foreach (var data in daftarData)
             {
@@ -116,6 +116,11 @@ namespace Sak_Gabah.Views
 
                 verifikasiSupplierLayoutPanel.Controls.Add(kartuBaru);
             }
+        }
+        private void kelolaAkunbutton_Click_1(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

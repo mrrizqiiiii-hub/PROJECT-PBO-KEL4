@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using Sak_Gabah.Controllers.Interface;
 using Sak_Gabah.Helpers;
 using Sak_Gabah.Models;
 using System;
@@ -8,9 +9,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Sak_Gabah.Controllers
 {
-    internal class C_kelolaAkun
+    internal class C_kelolaAkun : C_baseController, IControllerBaca<M_user>, IControllerTambah<M_user>
     {
-        public List<M_user> ambilUser()
+        public List<M_user> AmbilData()
         {
             List<M_user> listUser = new List<M_user>();
 
@@ -19,9 +20,8 @@ namespace Sak_Gabah.Controllers
                 "FROM \"user\" " +
                 "WHERE role = 'Karyawan'";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var reader = cmd.ExecuteReader();
@@ -42,7 +42,7 @@ namespace Sak_Gabah.Controllers
             return listUser;
         }
 
-        public List<M_user> ambilUser(string keyWord)
+        public List<M_user> AmbilData(string keyWord)
         {
             List<M_user> listUser = new List<M_user>();
 
@@ -51,9 +51,8 @@ namespace Sak_Gabah.Controllers
                 "FROM \"user\" " +
                 "WHERE role = 'Karyawan' AND (WHERE username_user ILIKE @keyword OR nama_lengkap ILIKE @keyword)";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@keyword", keyWord);
@@ -76,7 +75,7 @@ namespace Sak_Gabah.Controllers
             return listUser;
         }
 
-        public M_user ambilUser(int id)
+        public M_user AmbilData(int id)
         {
             M_user user = null;
 
@@ -86,9 +85,8 @@ namespace Sak_Gabah.Controllers
                 FROM ""user""
                 WHERE id_user = @id";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
@@ -122,9 +120,8 @@ namespace Sak_Gabah.Controllers
                 SET status_akun = @statusAkun 
                 WHERE id_user = @idPengajuan ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@idPengajuan", dataUser.id);
@@ -143,16 +140,16 @@ namespace Sak_Gabah.Controllers
             return isSukses;
         }
 
-        public bool tambahAkun(M_user dataBaru)
+        public bool TambahData(M_user dataBaru)
         {
             bool sukses = false;
+
             string query = @"
                 INSERT INTO ""user""(email_user, username_user, password_user, nama_lengkap, no_telpon, role, status_akun) 
                 VALUES (@emailUser, @username, 'default123', @namaLengkap, @noTelpon, 'Karyawan', 'Aktif')";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@emailUser", dataBaru.email);
@@ -176,9 +173,8 @@ namespace Sak_Gabah.Controllers
                 FROM ""user""
                 WHERE email_user ILIKE @emailUser OR username_user ILIKE @username";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@emailUser", dataBaru.email);
@@ -201,9 +197,8 @@ namespace Sak_Gabah.Controllers
                 SET password_user = 'default123'
                 WHERE username_user ILIKE @username";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
@@ -218,26 +213,29 @@ namespace Sak_Gabah.Controllers
 
         public bool gantiPassword(string username, string password)
         {
-            bool adaDuplikat = false;
+            bool isSukses = false;
+
             string query = @"
                 UPDATE ""user""
                 SET password_user = @password
                 WHERE username_user ILIKE @username";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
 
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    int barisPengaruh = cmd.ExecuteNonQuery();
 
-                    if (count > 0) adaDuplikat = true;
+                    if (barisPengaruh > 0)
+                    {
+                        isSukses = true;
+                    }
                 }
             }
-            return adaDuplikat;
+            return isSukses;
         }
 
         public int tambahCustomer(string nama, string noTelpon, string alamat)
@@ -248,9 +246,8 @@ namespace Sak_Gabah.Controllers
                 VALUES (@nama_customer, @noTelpon, @alamat) 
                 RETURNING id_customer";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@nama_customer", nama);
@@ -272,9 +269,8 @@ namespace Sak_Gabah.Controllers
                 SET email_user = @email, username_user = @username, nama_lengkap = @nama, no_telpon = @nomorTelpon, alamat = @alamat 
                 WHERE id_user = @id ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
@@ -306,9 +302,8 @@ namespace Sak_Gabah.Controllers
                 FROM ""user""
                 WHERE username_user ILIKE @username AND password_user ILIKE @password";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
@@ -323,3 +318,4 @@ namespace Sak_Gabah.Controllers
         }
     }
 }
+

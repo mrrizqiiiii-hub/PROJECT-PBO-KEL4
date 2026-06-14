@@ -87,7 +87,7 @@ namespace Sak_Gabah.Views
 
         private void kelolaAkunbutton_Click(object sender, EventArgs e)
         {
-            V_kelolaAkun kelolaAkun = new V_kelolaAkun();
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
             kelolaAkun.ShowDialog();
         }
     }

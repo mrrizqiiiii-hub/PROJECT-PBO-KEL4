@@ -38,11 +38,13 @@
             // jumlahStoktextBox
             // 
             jumlahStoktextBox.BorderStyle = BorderStyle.None;
+            jumlahStoktextBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             jumlahStoktextBox.Location = new Point(91, 146);
             jumlahStoktextBox.Multiline = true;
             jumlahStoktextBox.Name = "jumlahStoktextBox";
             jumlahStoktextBox.Size = new Size(328, 43);
             jumlahStoktextBox.TabIndex = 5;
+            jumlahStoktextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // tambahbutton
             // 

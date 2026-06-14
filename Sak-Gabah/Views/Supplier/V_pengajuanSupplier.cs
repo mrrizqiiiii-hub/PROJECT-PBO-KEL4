@@ -57,7 +57,7 @@ namespace Sak_Gabah.Views
             C_pengajuan controller = new C_pengajuan();
             List<M_pengajuanKomoditas> daftarData;
 
-            daftarData = controller.ambilDataPengajuan(Helpers.UserSession.userAktif.id);
+            daftarData = controller.AmbilData(Helpers.UserSession.userAktif.id);
 
             if (daftarData.Count == 0)
             {

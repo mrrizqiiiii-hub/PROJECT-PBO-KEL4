@@ -75,7 +75,7 @@
             // 
             deskripsitextBox.BackColor = SystemColors.Window;
             deskripsitextBox.BorderStyle = BorderStyle.None;
-            deskripsitextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deskripsitextBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             deskripsitextBox.ForeColor = SystemColors.MenuText;
             deskripsitextBox.Location = new Point(279, 56);
             deskripsitextBox.Multiline = true;
@@ -85,10 +85,11 @@
             // 
             // komoditascomboBox
             // 
+            komoditascomboBox.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             komoditascomboBox.FormattingEnabled = true;
             komoditascomboBox.Location = new Point(59, 86);
             komoditascomboBox.Name = "komoditascomboBox";
-            komoditascomboBox.Size = new Size(157, 23);
+            komoditascomboBox.Size = new Size(157, 25);
             komoditascomboBox.TabIndex = 26;
             komoditascomboBox.SelectedIndexChanged += komoditascomboBox_SelectedIndexChanged;
             // 
@@ -96,7 +97,7 @@
             // 
             hargatextBox.BackColor = SystemColors.Window;
             hargatextBox.BorderStyle = BorderStyle.None;
-            hargatextBox.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            hargatextBox.Font = new Font("Century Gothic", 15.75F);
             hargatextBox.ForeColor = SystemColors.MenuText;
             hargatextBox.Location = new Point(48, 328);
             hargatextBox.Multiline = true;
@@ -110,7 +111,7 @@
             // 
             merktextBox.BackColor = SystemColors.Window;
             merktextBox.BorderStyle = BorderStyle.None;
-            merktextBox.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
+            merktextBox.Font = new Font("Century Gothic", 15.75F);
             merktextBox.ForeColor = SystemColors.MenuText;
             merktextBox.Location = new Point(48, 200);
             merktextBox.Multiline = true;

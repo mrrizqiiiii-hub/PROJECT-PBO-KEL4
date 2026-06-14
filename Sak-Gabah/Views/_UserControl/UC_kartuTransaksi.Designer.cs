@@ -56,7 +56,7 @@
             batalkanbutton.TabIndex = 29;
             batalkanbutton.Text = "BATAL";
             batalkanbutton.UseVisualStyleBackColor = false;
-            batalkanbutton.Click += tolakbutton_Click;
+            batalkanbutton.Click += batalkanbutton_Click;
             // 
             // selesaibutton
             // 

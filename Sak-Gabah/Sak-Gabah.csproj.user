@@ -28,7 +28,7 @@
     <Compile Update="Views\Supplier\V_editPengajuanSetoran.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Supplier\V_GantiPassword.cs">
+    <Compile Update="Views\V_GantiPassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\V_kelolaAkun.cs">

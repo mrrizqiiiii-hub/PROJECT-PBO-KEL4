@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using Npgsql;
+using Sak_Gabah.Controllers.Interface;
 using Sak_Gabah.Helpers;
 using Sak_Gabah.Models;
 using System;
@@ -9,9 +10,9 @@ using System.Text;
 
 namespace Sak_Gabah.Controllers
 {
-    internal class C_setoran
+    internal class C_setoran : C_baseController, IControllerBaca<M_setorSupply>, IControllerTambah<M_setorSupply>, IControllerHapus
     {
-        public List<M_setorSupply> ambilDataSetoran()
+        public List<M_setorSupply> AmbilData()
         {
             List<M_setorSupply> listData = new List<M_setorSupply>();
 
@@ -22,9 +23,8 @@ namespace Sak_Gabah.Controllers
                 "WHERE s.status_setoran = 'Selesai' ";
 
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var reader = cmd.ExecuteReader();
@@ -44,7 +44,7 @@ namespace Sak_Gabah.Controllers
             return listData;
         }
 
-        public List<M_setorSupply> ambilDataSetoran(string namaKomoditas)
+        public List<M_setorSupply> AmbilData(string namaKomoditas)
         {
             List<M_setorSupply> listHasil = new List<M_setorSupply>();
 
@@ -54,9 +54,8 @@ namespace Sak_Gabah.Controllers
                 JOIN detail_komoditas dk USING (id_detail_komoditas)
                 WHERE LOWER(dk.merk) LIKE LOWER(@keyword) ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@keyword", "%" + namaKomoditas + "%");
@@ -80,7 +79,7 @@ namespace Sak_Gabah.Controllers
             return listHasil;
         }
 
-        public List<M_setorSupply> ambilDataSetoran(DateOnly tanggalAwal, DateOnly tanggalAkhir)
+        public List<M_setorSupply> AmbilData(DateOnly tanggalAwal, DateOnly tanggalAkhir)
         {
             List<M_setorSupply> listHasil = new List<M_setorSupply>();
 
@@ -90,9 +89,8 @@ namespace Sak_Gabah.Controllers
                 JOIN detail_komoditas dk USING (id_detail_komoditas) 
                 WHERE s.tanggal_setoran BETWEEN @tanggalAwal AND @tanggalAkhir ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@tanggalAwal", tanggalAwal);
@@ -136,9 +134,8 @@ namespace Sak_Gabah.Controllers
                 "WHERE s.status_setoran = 'Proses' ";
 
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     var reader = cmd.ExecuteReader();
@@ -160,7 +157,7 @@ namespace Sak_Gabah.Controllers
             return listData;
         }
 
-        public List<M_setorSupply> ambilDataPerUser(int idUserAktif)
+        public List<M_setorSupply> AmbilData(int idUserAktif)
         {
             List<M_setorSupply> listData = new List<M_setorSupply>();
 
@@ -170,16 +167,16 @@ namespace Sak_Gabah.Controllers
                 	s.id_setoran AS idSetoran, 
                 	s.jumlah_setoran AS jumlahSetoran,
                 	dk.id_detail_komoditas AS idDetailKomoditas, 
-                	dk.merk AS merk,
+                	dk.merk AS merk
                 FROM setoran s
                 JOIN detail_komoditas dk USING (id_detail_komoditas)
                 WHERE s.status_setoran = 'Proses' AND dk.id_user = @id";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
                 try
                 {
-                    conn.Open();
+
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", idUserAktif);
@@ -229,11 +226,11 @@ namespace Sak_Gabah.Controllers
                 JOIN komoditas k USING (id_komoditas)
                 WHERE s.status_setoran = 'Selesai' AND dk.id_user = @id";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
                 try
                 {
-                    conn.Open();
+
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", idUserAktif);
@@ -286,11 +283,10 @@ namespace Sak_Gabah.Controllers
                 JOIN komoditas k USING (id_komoditas)
                 WHERE s.status_setoran = 'Selesai' AND dk.id_user = @id AND LOWER(k.nama_komoditas) LIKE LOWER(@namaKomoditas)";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
                 try
                 {
-                    conn.Open();
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", idUserAktif);
@@ -344,11 +340,11 @@ namespace Sak_Gabah.Controllers
                 JOIN komoditas k USING (id_komoditas)
                 WHERE s.status_setoran = 'Selesai' AND dk.id_user = @id AND s.tanggal_pengajuan BETWEEN @tanggalAwal AND @tanggalAkhir";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
                 try
                 {
-                    conn.Open();
+ 
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", idUserAktif);
@@ -398,9 +394,8 @@ namespace Sak_Gabah.Controllers
                 "WHERE s.status_setoran = 'Proses' AND s.tanggal_pengajuan BETWEEN @tanggalAwal AND @tanggalAkhir ";
 
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 
@@ -437,10 +432,8 @@ namespace Sak_Gabah.Controllers
                 "JOIN komoditas d USING (id_komoditas) " +
                 "WHERE s.status_setoran = 'Proses' AND d.nama_komoditas ILIKE @keyword ";
 
-
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 
@@ -479,9 +472,8 @@ namespace Sak_Gabah.Controllers
                 SET stok = stok + @stokBaru 
                 WHERE id_detail_komoditas = @idDetailKomoditas;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
 
                 using (var transaksi = conn.BeginTransaction())
                 {
@@ -526,9 +518,8 @@ namespace Sak_Gabah.Controllers
                 SET status_setoran = 'Dibatalkan' 
                 WHERE id_setoran = @idPengajuan ";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@idPengajuan", dataSetor.id);
@@ -544,7 +535,7 @@ namespace Sak_Gabah.Controllers
             return isSukses;
         }
 
-        public bool tambahPengajuan(M_setorSupply dataBaru)
+        public bool TambahData(M_setorSupply dataBaru)
         {
             bool isSukses = false;
 
@@ -552,11 +543,10 @@ namespace Sak_Gabah.Controllers
                 INSERT INTO setoran (id_detail_komoditas, jumlah_setoran, tanggal_pengajuan, status_setoran) 
                 VALUES (@idDetailKomoditas, @jumlahSetoran, CURRENT_DATE, 'Proses');";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
                 try
                 {
-                    conn.Open();
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@idDetailKomoditas", dataBaru.detailKomoditas.id);
@@ -589,9 +579,8 @@ namespace Sak_Gabah.Controllers
                     jumlah_setoran = @jumlahSetor
                 WHERE id_setoran = @idSetoran;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 
@@ -612,16 +601,15 @@ namespace Sak_Gabah.Controllers
         }
 
 
-        public bool hapusSetoran(int id)
+        public bool HapusData(int id)
         {
             bool isSukses = false;
 
             string query = @"
                 DELETE FROM setoran WHERE id_pengajuan = @id";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
 

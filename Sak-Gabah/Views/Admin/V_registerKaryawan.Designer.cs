@@ -37,6 +37,7 @@
             filterUsernamebutton = new Button();
             tambahAkunbutton = new Button();
             karyawanAkunLayoutPanel = new FlowLayoutPanel();
+            kelolaAkunbutton = new Button();
             SuspendLayout();
             // 
             // verifikasiSupplierbutton
@@ -132,6 +133,18 @@
             karyawanAkunLayoutPanel.Size = new Size(1102, 603);
             karyawanAkunLayoutPanel.TabIndex = 12;
             // 
+            // kelolaAkunbutton
+            // 
+            kelolaAkunbutton.BackColor = Color.Transparent;
+            kelolaAkunbutton.FlatAppearance.BorderSize = 0;
+            kelolaAkunbutton.FlatStyle = FlatStyle.Flat;
+            kelolaAkunbutton.Location = new Point(12, 672);
+            kelolaAkunbutton.Name = "kelolaAkunbutton";
+            kelolaAkunbutton.Size = new Size(45, 46);
+            kelolaAkunbutton.TabIndex = 13;
+            kelolaAkunbutton.UseVisualStyleBackColor = false;
+            kelolaAkunbutton.Click += kelolaAkunbutton_Click_1;
+            // 
             // V_registerKaryawan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -139,6 +152,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1350, 729);
+            Controls.Add(kelolaAkunbutton);
             Controls.Add(karyawanAkunLayoutPanel);
             Controls.Add(filterUsernamebutton);
             Controls.Add(tambahAkunbutton);
@@ -164,5 +178,6 @@
         private Button filterUsernamebutton;
         private Button tambahAkunbutton;
         private FlowLayoutPanel karyawanAkunLayoutPanel;
+        private Button kelolaAkunbutton;
     }
 }

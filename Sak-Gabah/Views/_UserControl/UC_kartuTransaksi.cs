@@ -52,21 +52,21 @@ namespace Sak_Gabah.Views._UserControl
             }
         }
 
-        private void tolakbutton_Click(object sender, EventArgs e)
+        private void batalkanbutton_Click(object sender, EventArgs e)
         {
-            C_penjualan kontroller = new C_penjualan();
+            C_penjualan controller = new C_penjualan();
 
-            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin MEMBATALKAN setoran ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin MEMBATALKAN transaksi ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (konfirmasi == DialogResult.Yes)
             {
                 try
                 {
-                    bool berhasil = kontroller.batalkanTransaksi(this.detailTrans);
+                    bool berhasil = controller.batalkanTransaksi(this.detailTrans);
 
                     if (berhasil)
                     {
-                        MessageBox.Show("Setoran berhasil dibatalkan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Transaksi berhasil dibatalkan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Dispose();
                     }
                 }

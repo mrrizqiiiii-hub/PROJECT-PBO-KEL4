@@ -28,7 +28,7 @@ namespace Sak_Gabah.Views.Admin
             C_komoditas controller = new C_komoditas();
             List<M_detailKomoditas> daftarData;
 
-            daftarData = controller.ambilDetailKomoditas(idDetailTerpilih);
+            daftarData = controller.AmbilData(idDetailTerpilih);
 
             foreach (var data in daftarData)
             {

@@ -43,7 +43,7 @@ namespace Sak_Gabah.Views.Admin
 
             if (string.IsNullOrWhiteSpace(merktextBox.Text) || string.IsNullOrWhiteSpace(hargatextBox.Text) || string.IsNullOrWhiteSpace(deskripsitextBox.Text) || komoditascomboBox.SelectedValue == null)
             {
-                MessageBox.Show("Mohon lengkapi data customer, pilihan barang, dan kuantitas!", "Validasi Gagal");
+                MessageBox.Show("Mohon lengkapi data", "Validasi Gagal");
                 return;
             }
 
@@ -71,7 +71,7 @@ namespace Sak_Gabah.Views.Admin
             dataBaru.user.id = Helpers.UserSession.userAktif.id;
 
             C_pengajuan kontrolPengajuan = new C_pengajuan();
-            bool berhasil = kontrolPengajuan.tambahPengajuan(dataBaru);
+            bool berhasil = kontrolPengajuan.TambahData(dataBaru);
 
             if (berhasil)
             {

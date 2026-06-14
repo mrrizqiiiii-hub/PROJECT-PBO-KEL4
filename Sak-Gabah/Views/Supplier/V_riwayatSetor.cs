@@ -74,7 +74,7 @@ namespace Sak_Gabah.Views
         private void tampilkanData()
         {
             C_setoran kontroller = new C_setoran();
-            List<M_setorSupply> dataMentah = kontroller.ambilDataSetoran();
+            List<M_setorSupply> dataMentah = kontroller.AmbilData();
 
             if (this.tanggalAwal != default(DateOnly) && this.tanggalAkhir != default(DateOnly))
             {

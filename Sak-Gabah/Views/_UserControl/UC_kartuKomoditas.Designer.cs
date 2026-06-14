@@ -103,11 +103,11 @@
             // 
             lihatDetailbutton.BackColor = Color.Green;
             lihatDetailbutton.FlatStyle = FlatStyle.Flat;
-            lihatDetailbutton.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lihatDetailbutton.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold);
             lihatDetailbutton.ForeColor = Color.LightGreen;
             lihatDetailbutton.Location = new Point(17, 231);
             lihatDetailbutton.Name = "lihatDetailbutton";
-            lihatDetailbutton.Size = new Size(222, 60);
+            lihatDetailbutton.Size = new Size(223, 60);
             lihatDetailbutton.TabIndex = 5;
             lihatDetailbutton.Text = "LIHAT";
             lihatDetailbutton.UseVisualStyleBackColor = false;

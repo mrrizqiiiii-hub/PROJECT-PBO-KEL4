@@ -56,7 +56,7 @@ namespace Sak_Gabah.Views.Admin
             dataBaru.detailKomoditas.id = Convert.ToInt32(merkcomboBox.SelectedValue);
 
             C_setoran kontrolSetoran = new C_setoran();
-            bool berhasil = kontrolSetoran.tambahPengajuan(dataBaru);
+            bool berhasil = kontrolSetoran.TambahData(dataBaru);
 
             if (berhasil)
             {

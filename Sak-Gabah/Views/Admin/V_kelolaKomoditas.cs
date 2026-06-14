@@ -58,11 +58,11 @@ namespace Sak_Gabah.Views
 
             if (string.IsNullOrWhiteSpace(this.kataKunci))
             {
-                daftarData = controller.ambilDataKomoditas();
+                daftarData = controller.AmbilData();
             }
             else
             {
-                daftarData = controller.ambilDataKomoditas(this.kataKunci);
+                daftarData = controller.AmbilData(this.kataKunci);
             }
 
             if (daftarData.Count == 0)
@@ -82,7 +82,8 @@ namespace Sak_Gabah.Views
                     data.id,
                     data.komoditas.nama_komoditas,
                     data.komoditas.totalStok,
-                    data.komoditas.jumlahSupplier
+                    data.komoditas.jumlahSupplier,
+                    data.komoditas.statusAktif
                 );
 
                 kartuLayoutPanel.Controls.Add(kartuBaru);
@@ -108,6 +109,12 @@ namespace Sak_Gabah.Views
             V_registerKaryawan registerKaryawan = new V_registerKaryawan();
             registerKaryawan.Show();
             this.Close();
+        }
+
+        private void kelolaAkunbutton_Click_1(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

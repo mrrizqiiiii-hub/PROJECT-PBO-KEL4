@@ -79,7 +79,7 @@
             // 
             namaCustomertextBox.BackColor = SystemColors.Window;
             namaCustomertextBox.BorderStyle = BorderStyle.None;
-            namaCustomertextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            namaCustomertextBox.Font = new Font("Century Gothic", 12F);
             namaCustomertextBox.ForeColor = SystemColors.MenuText;
             namaCustomertextBox.Location = new Point(48, 196);
             namaCustomertextBox.Multiline = true;
@@ -91,7 +91,7 @@
             // 
             kuantitastextBox.BackColor = SystemColors.Window;
             kuantitastextBox.BorderStyle = BorderStyle.None;
-            kuantitastextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kuantitastextBox.Font = new Font("Century Gothic", 12F);
             kuantitastextBox.ForeColor = SystemColors.MenuText;
             kuantitastextBox.Location = new Point(271, 95);
             kuantitastextBox.Multiline = true;
@@ -131,7 +131,7 @@
             // 
             noTelpontextBox.BackColor = SystemColors.Window;
             noTelpontextBox.BorderStyle = BorderStyle.None;
-            noTelpontextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            noTelpontextBox.Font = new Font("Century Gothic", 12F);
             noTelpontextBox.ForeColor = SystemColors.MenuText;
             noTelpontextBox.Location = new Point(43, 296);
             noTelpontextBox.Multiline = true;
@@ -143,7 +143,7 @@
             // 
             alamattextBox.BackColor = SystemColors.Window;
             alamattextBox.BorderStyle = BorderStyle.None;
-            alamattextBox.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            alamattextBox.Font = new Font("Century Gothic", 12F);
             alamattextBox.ForeColor = SystemColors.MenuText;
             alamattextBox.Location = new Point(42, 395);
             alamattextBox.Multiline = true;

@@ -27,6 +27,13 @@ namespace Sak_Gabah.Views.Admin
             dataBaru.no_telpon= nomorTelepontextBox.Text;
             dataBaru.email = emailtextBox.Text;
 
+            if (string.IsNullOrWhiteSpace(usernametextBox.Text) || string.IsNullOrWhiteSpace(namaKaryawantextBox.Text) || string.IsNullOrWhiteSpace(nomorTelepontextBox.Text) || string.IsNullOrWhiteSpace(emailtextBox.Text))
+            {
+                MessageBox.Show("Mohon lengkapi data customer, pilihan barang, dan kuantitas!", "Validasi Gagal");
+                return;
+            }
+
+
             if (kontroller.cekDuplikat(dataBaru))
             {
                 MessageBox.Show
@@ -35,7 +42,7 @@ namespace Sak_Gabah.Views.Admin
                 return;
             }
 
-            bool sukses = kontroller.tambahAkun(dataBaru);
+            bool sukses = kontroller.TambahData(dataBaru);
 
             if (sukses)
             {

@@ -37,6 +37,7 @@
             filterTanggalbutton = new Button();
             filterKomoditasbutton = new Button();
             setorandataGridView = new DataGridView();
+            kelolaAkunbutton = new Button();
             ((System.ComponentModel.ISupportInitialize)setorandataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -134,6 +135,18 @@
             setorandataGridView.Size = new Size(1103, 602);
             setorandataGridView.TabIndex = 10;
             // 
+            // kelolaAkunbutton
+            // 
+            kelolaAkunbutton.BackColor = Color.Transparent;
+            kelolaAkunbutton.FlatAppearance.BorderSize = 0;
+            kelolaAkunbutton.FlatStyle = FlatStyle.Flat;
+            kelolaAkunbutton.Location = new Point(12, 672);
+            kelolaAkunbutton.Name = "kelolaAkunbutton";
+            kelolaAkunbutton.Size = new Size(45, 46);
+            kelolaAkunbutton.TabIndex = 11;
+            kelolaAkunbutton.UseVisualStyleBackColor = false;
+            kelolaAkunbutton.Click += kelolaAkunbutton_Click_1;
+            // 
             // V_laporanSupply
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -142,6 +155,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1350, 729);
+            Controls.Add(kelolaAkunbutton);
             Controls.Add(setorandataGridView);
             Controls.Add(filterKomoditasbutton);
             Controls.Add(filterTanggalbutton);
@@ -168,5 +182,6 @@
         private Button filterTanggalbutton;
         private Button filterKomoditasbutton;
         private DataGridView setorandataGridView;
+        private Button kelolaAkunbutton;
     }
 }

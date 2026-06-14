@@ -64,7 +64,7 @@ namespace Sak_Gabah.Views.Admin
             {
                 int idKomoditas = Convert.ToInt32(komoditascomboBox.SelectedValue);
 
-                List<M_detailKomoditas> listMerk = kontrolKomoditas.ambilDetailKomoditas(idKomoditas);
+                List<M_detailKomoditas> listMerk = kontrolKomoditas.ambilDetailKomoditasTransaksi(idKomoditas);
 
                 merkcomboBox.DataSource = listMerk;
                 merkcomboBox.DisplayMember = "merk";

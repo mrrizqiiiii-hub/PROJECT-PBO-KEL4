@@ -58,7 +58,7 @@ namespace Sak_Gabah.Views.Supplier
         private void batalbutton_Click(object sender, EventArgs e)
         {
             C_setoran kontrolPengajuan = new C_setoran();
-            bool berhasil = kontrolPengajuan.hapusSetoran(_dataSetor.id);
+            bool berhasil = kontrolPengajuan.HapusData(_dataSetor.id);
             if (berhasil)
             {
                 MessageBox.Show("Data pengajuan berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);

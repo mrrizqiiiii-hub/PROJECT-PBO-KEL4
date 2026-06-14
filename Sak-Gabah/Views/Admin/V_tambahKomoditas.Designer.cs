@@ -39,30 +39,35 @@
             // maksimalStoktextBox
             // 
             maksimalStoktextBox.BorderStyle = BorderStyle.None;
+            maksimalStoktextBox.Font = new Font("Century Gothic", 12F);
             maksimalStoktextBox.Location = new Point(87, 170);
             maksimalStoktextBox.Multiline = true;
             maksimalStoktextBox.Name = "maksimalStoktextBox";
             maksimalStoktextBox.Size = new Size(232, 33);
             maksimalStoktextBox.TabIndex = 0;
+            maksimalStoktextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // namaKomoditastextBox
             // 
             namaKomoditastextBox.BorderStyle = BorderStyle.None;
-            namaKomoditastextBox.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            namaKomoditastextBox.Font = new Font("Century Gothic", 12F);
             namaKomoditastextBox.Location = new Point(87, 70);
             namaKomoditastextBox.Multiline = true;
             namaKomoditastextBox.Name = "namaKomoditastextBox";
             namaKomoditastextBox.Size = new Size(232, 33);
             namaKomoditastextBox.TabIndex = 1;
+            namaKomoditastextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // maksimalSuppliertextBox
             // 
             maksimalSuppliertextBox.BorderStyle = BorderStyle.None;
+            maksimalSuppliertextBox.Font = new Font("Century Gothic", 12F);
             maksimalSuppliertextBox.Location = new Point(87, 274);
             maksimalSuppliertextBox.Multiline = true;
             maksimalSuppliertextBox.Name = "maksimalSuppliertextBox";
             maksimalSuppliertextBox.Size = new Size(232, 33);
             maksimalSuppliertextBox.TabIndex = 2;
+            maksimalSuppliertextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // tambahbutton
             // 

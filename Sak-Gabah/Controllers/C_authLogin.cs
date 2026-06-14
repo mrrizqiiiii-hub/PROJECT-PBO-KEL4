@@ -8,16 +8,15 @@ using Sak_Gabah.Helpers;
 
 namespace Sak_Gabah.Controllers
 {
-    public class C_authLogin 
+    public class C_authLogin : C_baseController
     {
         public M_user AuthLogin(string username, string password)
         {
             M_user userResult = null;
             string query = "SELECT id_user, nama_lengkap, username_user, password_user, role, status_akun FROM \"user\" WHERE username_user = @user AND password_user = @pass";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {   
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@user", username);
@@ -55,9 +54,8 @@ namespace Sak_Gabah.Controllers
             bool exist = false;
             string query = "SELECT COUNT(*) FROM \"user\" WHERE username_user = @username;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username.TrimStart().TrimEnd());
@@ -75,9 +73,8 @@ namespace Sak_Gabah.Controllers
                 INSERT INTO ""user"" (email_user, username_user, password_user, role, status_akun) 
                 VALUES (@email, @username, @password, 'Supplier', 'Aktif');";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@email", userBaru.email.TrimStart().TrimEnd());
@@ -96,9 +93,8 @@ namespace Sak_Gabah.Controllers
             bool exist = false;
             string query = "SELECT COUNT(*) FROM \"user\" WHERE email_user = @email;";
 
-            using (var conn = dbHelpers.GetConnection())
+            using (var conn = AmbilKoneksi())
             {
-                conn.Open();
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());

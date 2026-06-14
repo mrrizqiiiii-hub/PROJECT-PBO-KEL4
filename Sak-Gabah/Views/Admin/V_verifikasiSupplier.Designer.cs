@@ -38,6 +38,7 @@
             filterSupplierbutton = new Button();
             filterKomoditasbutton = new Button();
             verifikasiSupplierLayoutPanel = new FlowLayoutPanel();
+            kelolaAkunbutton = new Button();
             SuspendLayout();
             // 
             // button1
@@ -143,6 +144,18 @@
             verifikasiSupplierLayoutPanel.Size = new Size(1102, 603);
             verifikasiSupplierLayoutPanel.TabIndex = 5;
             // 
+            // kelolaAkunbutton
+            // 
+            kelolaAkunbutton.BackColor = Color.Transparent;
+            kelolaAkunbutton.FlatAppearance.BorderSize = 0;
+            kelolaAkunbutton.FlatStyle = FlatStyle.Flat;
+            kelolaAkunbutton.Location = new Point(12, 671);
+            kelolaAkunbutton.Name = "kelolaAkunbutton";
+            kelolaAkunbutton.Size = new Size(45, 46);
+            kelolaAkunbutton.TabIndex = 8;
+            kelolaAkunbutton.UseVisualStyleBackColor = false;
+            kelolaAkunbutton.Click += kelolaAkunbutton_Click_1;
+            // 
             // V_verifikasiSupplier
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -151,6 +164,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1350, 729);
+            Controls.Add(kelolaAkunbutton);
             Controls.Add(verifikasiSupplierLayoutPanel);
             Controls.Add(filterKomoditasbutton);
             Controls.Add(filterSupplierbutton);
@@ -178,5 +192,6 @@
         private Button filterSupplierbutton;
         private Button filterKomoditasbutton;
         private FlowLayoutPanel verifikasiSupplierLayoutPanel;
+        private Button kelolaAkunbutton;
     }
 }

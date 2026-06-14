@@ -40,29 +40,38 @@
             // usernametextBox
             // 
             usernametextBox.BorderStyle = BorderStyle.None;
+            usernametextBox.Font = new Font("Century Gothic", 12F);
             usernametextBox.Location = new Point(62, 53);
             usernametextBox.Multiline = true;
             usernametextBox.Name = "usernametextBox";
+            usernametextBox.PlaceholderText = "WAJIB DIISI";
             usernametextBox.Size = new Size(235, 29);
             usernametextBox.TabIndex = 0;
+            usernametextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // namaKaryawantextBox
             // 
             namaKaryawantextBox.BorderStyle = BorderStyle.None;
+            namaKaryawantextBox.Font = new Font("Century Gothic", 12F);
             namaKaryawantextBox.Location = new Point(62, 127);
             namaKaryawantextBox.Multiline = true;
             namaKaryawantextBox.Name = "namaKaryawantextBox";
+            namaKaryawantextBox.PlaceholderText = "WAJIB DIISI";
             namaKaryawantextBox.Size = new Size(235, 29);
             namaKaryawantextBox.TabIndex = 1;
+            namaKaryawantextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // nomorTelepontextBox
             // 
             nomorTelepontextBox.BorderStyle = BorderStyle.None;
+            nomorTelepontextBox.Font = new Font("Century Gothic", 12F);
             nomorTelepontextBox.Location = new Point(62, 201);
             nomorTelepontextBox.Multiline = true;
             nomorTelepontextBox.Name = "nomorTelepontextBox";
+            nomorTelepontextBox.PlaceholderText = "WAJIB DIISI";
             nomorTelepontextBox.Size = new Size(235, 29);
             nomorTelepontextBox.TabIndex = 2;
+            nomorTelepontextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // batalbutton
             // 
@@ -93,11 +102,14 @@
             // emailtextBox
             // 
             emailtextBox.BorderStyle = BorderStyle.None;
+            emailtextBox.Font = new Font("Century Gothic", 12F);
             emailtextBox.Location = new Point(62, 275);
             emailtextBox.Multiline = true;
             emailtextBox.Name = "emailtextBox";
+            emailtextBox.PlaceholderText = "WAJIB DIISI";
             emailtextBox.Size = new Size(235, 29);
             emailtextBox.TabIndex = 7;
+            emailtextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // V_tambahAkun
             // 

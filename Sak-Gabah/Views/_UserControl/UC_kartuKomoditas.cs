@@ -24,12 +24,14 @@ namespace Sak_Gabah.Views._UserControl
 
         }
 
+        C_komoditas kontroller = new C_komoditas();
+
         private void lihatDetailbutton_Click(object sender, EventArgs e)
         {
             V_lihatDetailKomoditas detailKomoditas = new V_lihatDetailKomoditas(this.idTerpilih);
 
-            C_komoditas kontroller = new C_komoditas();
-            List<M_detailKomoditas> cekData = kontroller.ambilDetailKomoditas(idTerpilih);
+
+            List<M_detailKomoditas> cekData = kontroller.AmbilData(idTerpilih);
             if (cekData.Count == 0)
             {
                 MessageBox.Show("Tidak ada detail komoditas.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -37,7 +39,7 @@ namespace Sak_Gabah.Views._UserControl
             }
             detailKomoditas.ShowDialog();
 
-            
+
         }
 
         private void totalStoklabel_Click(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace Sak_Gabah.Views._UserControl
 
         }
 
-        public void isiDataKartu(int id, string namaKomoditas, double totalStok, int jumlahSupplier)
+        public void isiDataKartu(int id, string namaKomoditas, double totalStok, int jumlahSupplier, string statusKomoditas)
         {
             this.idTerpilih = id;
             namaKomoditaslabel.Text = namaKomoditas;

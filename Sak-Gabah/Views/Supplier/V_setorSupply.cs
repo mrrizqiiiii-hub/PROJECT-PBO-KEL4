@@ -58,7 +58,7 @@ namespace Sak_Gabah.Views
 
             C_setoran controller = new C_setoran();
             int idUser = Helpers.UserSession.userAktif.id;
-            List<M_setorSupply> daftarData = controller.ambilDataPerUser(idUser);
+            List<M_setorSupply> daftarData = controller.AmbilData(idUser);
 
             if (daftarData.Count == 0)
             {

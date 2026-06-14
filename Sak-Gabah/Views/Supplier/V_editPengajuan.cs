@@ -96,7 +96,7 @@ namespace Sak_Gabah.Views.Supplier
         private void batalButton_Click(object sender, EventArgs e)
         {
             C_pengajuan kontrolPengajuan = new C_pengajuan();
-            bool berhasil = kontrolPengajuan.deletePengajuan(dataEdit.id);
+            bool berhasil = kontrolPengajuan.HapusData(dataEdit.id);
             if (berhasil)
             {
                 MessageBox.Show("Data pengajuan berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
