@@ -1,12 +1,10 @@
-﻿using Npgsql;
-using Sak_Gabah.Helpers;
+﻿
+
 using Sak_Gabah.Models;
 using Sak_Gabah.Repository;
-using Sak_Gabah.Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Sak_Gabah.Controllers
 {

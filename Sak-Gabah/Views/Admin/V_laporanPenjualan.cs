@@ -84,7 +84,7 @@ namespace Sak_Gabah.Views
 
             if (dataMentah.Count == 0)
             {
-                MessageBox.Show("Setoran masih kosong.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Penjualan masih kosong.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

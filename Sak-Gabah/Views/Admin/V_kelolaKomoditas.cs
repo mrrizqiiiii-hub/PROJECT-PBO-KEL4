@@ -70,7 +70,6 @@ namespace Sak_Gabah.Views
                 MessageBox.Show("Komoditas tidak ditemukan.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 kataKunci = "";
-                tampilkanKartuKomoditas();
                 return;
             }
 
