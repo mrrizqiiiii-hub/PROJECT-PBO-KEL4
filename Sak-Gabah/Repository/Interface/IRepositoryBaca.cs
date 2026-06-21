@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sak_Gabah.Controllers.Interface
+namespace Sak_Gabah.Repository.Interface
 {
-    public interface IControllerBaca<T>
+    public interface IRepositoryBaca<T>
     {
         List<T> AmbilData();
     }

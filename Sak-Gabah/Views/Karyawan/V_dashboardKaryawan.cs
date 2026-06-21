@@ -1,4 +1,5 @@
 ﻿using Sak_Gabah.Controllers;
+using Sak_Gabah.Views.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,12 @@ namespace Sak_Gabah.Views
             V_kelolaTransaksi kelolaTransaksi = new V_kelolaTransaksi();
             kelolaTransaksi.Show();
             this.Close();
+        }
+
+        private void kelolaAkunbutton_Click(object sender, EventArgs e)
+        {        
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

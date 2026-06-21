@@ -94,6 +94,9 @@
     <Compile Update="Views\_UserControl\UC_kartuKomoditas.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <SplashScreen Update="Views\_UserControl\UC_kartuKomoditas.cs">
+      <SubType>UserControl</SubType>
+    </SplashScreen>
     <Compile Update="Views\_UserControl\UC_kartuPengajuan.cs">
       <SubType>UserControl</SubType>
     </Compile>

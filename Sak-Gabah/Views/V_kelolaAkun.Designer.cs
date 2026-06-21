@@ -41,11 +41,13 @@
             // 
             // emailtextBox
             // 
+            emailtextBox.BackColor = SystemColors.ControlLightLight;
             emailtextBox.BorderStyle = BorderStyle.None;
             emailtextBox.Font = new Font("Century Gothic", 12F);
             emailtextBox.Location = new Point(53, 198);
             emailtextBox.Multiline = true;
             emailtextBox.Name = "emailtextBox";
+            emailtextBox.ReadOnly = true;
             emailtextBox.Size = new Size(155, 34);
             emailtextBox.TabIndex = 0;
             emailtextBox.Text = "Blabla@gmail.com";

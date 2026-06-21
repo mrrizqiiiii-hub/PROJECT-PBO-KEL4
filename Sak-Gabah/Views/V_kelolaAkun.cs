@@ -29,47 +29,70 @@ namespace Sak_Gabah.Views.Admin
 
         C_kelolaAkun kelolaAkun = new C_kelolaAkun();
         C_authLogin authController = new C_authLogin();
+
         private void V_kelolaAkun_Load(object sender, EventArgs e)
         {
             
 
-            M_user dataProfil = kelolaAkun.AmbilData(Helpers.UserSession.userAktif.id);
+            M_user dataProfilAktif = kelolaAkun.AmbilData(Helpers.UserSession.userAktif.id);
 
-            usernametextBox.Text = dataProfil.username;
-            namaLengkaptextBox.Text = dataProfil.namalengkap;
-            emailtextBox.Text = dataProfil.email;
-            noTelpontextBox.Text = dataProfil.no_telpon;
-            alamattextBox.Text = dataProfil.alamat.alamatLengkap;
+            usernametextBox.Text = dataProfilAktif.username;
+            usernametextBox.Tag = dataProfilAktif.username;
+
+            namaLengkaptextBox.Text = dataProfilAktif.namalengkap;
+            noTelpontextBox.Text = dataProfilAktif.no_telpon;
+            alamattextBox.Text = dataProfilAktif.alamat.alamatLengkap;
+
 
         }
 
         private void simpanPerubahabutton_Click(object sender, EventArgs e)
         {
-            bool berhasil = kelolaAkun.updateAkun(emailtextBox.Text, usernametextBox.Text, namaLengkaptextBox.Text, noTelpontextBox.Text, alamattextBox.Text, Helpers.UserSession.userAktif.id);
 
-            if (string.IsNullOrWhiteSpace(usernametextBox.Text) || string.IsNullOrWhiteSpace(namaLengkaptextBox.Text) || string.IsNullOrWhiteSpace(emailtextBox.Text) || string.IsNullOrWhiteSpace(alamattextBox.Text) || string.IsNullOrWhiteSpace(noTelpontextBox.Text))
+            string usernameAsli = usernametextBox.Tag?.ToString();
+            string usernameSekarang = usernametextBox.Text;
+
+            M_user _dataProfil = new M_user();
+            _dataProfil.id = Helpers.UserSession.userAktif.id;
+            _dataProfil.username = usernametextBox.Text;
+            _dataProfil.namalengkap = namaLengkaptextBox.Text;
+            _dataProfil.no_telpon = noTelpontextBox.Text;
+            _dataProfil.alamat.alamatLengkap = alamattextBox.Text;
+            
+
+            if (string.IsNullOrWhiteSpace(usernametextBox.Text) || string.IsNullOrWhiteSpace(namaLengkaptextBox.Text) ||  string.IsNullOrWhiteSpace(alamattextBox.Text) || string.IsNullOrWhiteSpace(noTelpontextBox.Text))
             {
                 MessageBox.Show("Mohon lengkapi data akun!", "Validasi Gagal");
                 return;
             }
 
-            if (authController.cekUsername(usernametextBox.Text))
+            if (usernameAsli != usernameSekarang)
             {
-                MessageBox.Show($"Username '{usernametextBox.Text}' sudah digunakan oleh orang lain. Silakan cari nama unik yang berbeda!", "Username Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
+                bool berhasil = kelolaAkun.updateAkun(_dataProfil, usernameSekarang);
 
-            if (authController.cekEmail(emailtextBox.Text))
-            {
-                MessageBox.Show($"Email '{emailtextBox.Text}' sudah pernah didaftarkan pada akun lain. Silakan gunakan email yang berbeda!",
-                                "Email Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
+                if (berhasil)
+                {
+                    MessageBox.Show($"Akun berhasil dirubah", "Sukses");
+                    this.Close();
+                    Helpers.UserSession.userAktif.username = usernametextBox.Text;
+                    Helpers.UserSession.userAktif.namalengkap = namaLengkaptextBox.Text;
+                    Helpers.UserSession.userAktif.no_telpon = noTelpontextBox.Text;
+                    Helpers.UserSession.userAktif.alamat.alamatLengkap = alamattextBox.Text;
 
-            if (berhasil)
+                    MessageBox.Show($"Semua data berhasil diubah!", "Berhasil");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show($"Username sudah digunakan!", "Gagal!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+
+            }
+            else
             {
-                MessageBox.Show($"Akun berhasil dirubah", "Sukses");
-                this.Close();
+                MessageBox.Show("Username tetap sama.", "Informasi");
+                return;
             }
         }
 

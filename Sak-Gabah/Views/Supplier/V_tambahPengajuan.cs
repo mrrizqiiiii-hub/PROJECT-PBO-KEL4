@@ -75,7 +75,7 @@ namespace Sak_Gabah.Views.Admin
 
             if (berhasil)
             {
-                MessageBox.Show($"Transaksi Berhasil ditambahkan", "Sukses");
+                MessageBox.Show($"Pengajuan Berhasil ditambahkan", "Sukses");
                 this.Close();
             }
         }

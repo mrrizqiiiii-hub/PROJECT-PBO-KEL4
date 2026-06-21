@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sak_Gabah.Controllers
+namespace Sak_Gabah.Repository
 {
-    public abstract class C_baseController
+    public abstract class R_baseRepo
     {
         protected NpgsqlConnection AmbilKoneksi()
         {

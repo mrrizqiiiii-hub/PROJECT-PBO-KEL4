@@ -24,6 +24,7 @@ namespace Sak_Gabah.Views.Supplier
 
         M_setorSupply _dataSetor = new M_setorSupply();
         C_komoditas kontrolkomoditas = new C_komoditas();
+        C_setoran kontrolPengajuan = new C_setoran();
 
         private void merkcomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -53,11 +54,25 @@ namespace Sak_Gabah.Views.Supplier
             dataBaru.id = _dataSetor.id;
             dataBaru.detailKomoditas.id = Convert.ToInt32(merkeditcomboBox.SelectedValue);
             dataBaru.jumlah_setoran = Convert.ToInt32(jumlahStoktextBox.Text);
+
+            bool berhasil = kontrolPengajuan.updateSetoran(dataBaru);
+            if (berhasil)
+            {
+                MessageBox.Show("Data pengajuan berhasil diupdate!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Gagal memperbarui data, ID tidak ditemukan.", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void batalbutton_Click(object sender, EventArgs e)
         {
-            C_setoran kontrolPengajuan = new C_setoran();
+
             bool berhasil = kontrolPengajuan.HapusData(_dataSetor.id);
             if (berhasil)
             {
@@ -68,7 +83,7 @@ namespace Sak_Gabah.Views.Supplier
             }
             else
             {
-                MessageBox.Show("Gagal memperbarui data, ID tidak ditemukan.", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Gagal menghapus data, ID tidak ditemukan.", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

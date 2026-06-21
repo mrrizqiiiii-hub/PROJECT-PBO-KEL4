@@ -33,15 +33,6 @@ namespace Sak_Gabah.Views.Admin
                 return;
             }
 
-
-            if (kontroller.cekDuplikat(dataBaru))
-            {
-                MessageBox.Show
-                    ($"Akun dengan username '{usernametextBox.Text}' atau email '{emailtextBox.Text}' sudah ada di sistem! Silakan gunakan username atau email lain.",
-                      "Data Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             bool sukses = kontroller.TambahData(dataBaru);
 
             if (sukses)
@@ -51,7 +42,7 @@ namespace Sak_Gabah.Views.Admin
             }
             else
             {
-                MessageBox.Show("Gagal menambahkan akun ke database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Gagal menambahkan akun ke database, username sudah digunakan!.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 

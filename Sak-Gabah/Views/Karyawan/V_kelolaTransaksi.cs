@@ -45,7 +45,7 @@ namespace Sak_Gabah.Views
         {
             V_tambahtransaksi tambahTransaksi = new V_tambahtransaksi();
             tambahTransaksi.ShowDialog();
-            
+
 
         }
 
@@ -96,5 +96,10 @@ namespace Sak_Gabah.Views
             }
         }
 
+        private void kelolaAkunbutton_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
+        }
     }
 }

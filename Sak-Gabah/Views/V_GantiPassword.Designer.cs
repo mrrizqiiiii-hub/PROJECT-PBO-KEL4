@@ -42,7 +42,7 @@
             passwordlamatextBox.Location = new Point(96, 75);
             passwordlamatextBox.Multiline = true;
             passwordlamatextBox.Name = "passwordlamatextBox";
-            passwordlamatextBox.PlaceholderText = "Password Baru";
+            passwordlamatextBox.PlaceholderText = "Password Lama";
             passwordlamatextBox.Size = new Size(463, 47);
             passwordlamatextBox.TabIndex = 0;
             passwordlamatextBox.TextAlign = HorizontalAlignment.Center;
@@ -54,7 +54,7 @@
             passwordbarutextBox.Location = new Point(96, 191);
             passwordbarutextBox.Multiline = true;
             passwordbarutextBox.Name = "passwordbarutextBox";
-            passwordbarutextBox.PlaceholderText = "Password Lama";
+            passwordbarutextBox.PlaceholderText = "Password Baru";
             passwordbarutextBox.Size = new Size(463, 47);
             passwordbarutextBox.TabIndex = 0;
             passwordbarutextBox.TextAlign = HorizontalAlignment.Center;

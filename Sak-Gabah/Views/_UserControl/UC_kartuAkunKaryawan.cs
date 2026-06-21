@@ -67,7 +67,6 @@ namespace Sak_Gabah.Views._UserControl
 
         private void resetbutton_Click(object sender, EventArgs e)
         {
-
             bool berhasil = kontroller.resetPassword(dataUser.username);
 
             if (berhasil)

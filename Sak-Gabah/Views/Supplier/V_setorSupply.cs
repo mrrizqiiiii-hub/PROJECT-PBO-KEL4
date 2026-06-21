@@ -48,7 +48,8 @@ namespace Sak_Gabah.Views
         {
             V_tambahSetoran tambahSetoran = new V_tambahSetoran();
             tambahSetoran.ShowDialog();
-           
+            tampilkanKartu();
+
 
         }
 
@@ -62,7 +63,7 @@ namespace Sak_Gabah.Views
 
             if (daftarData.Count == 0)
             {
-                MessageBox.Show("Belum ada pengajuan setoran yang perlu diverifikasi.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Belum ada pengajuan setoran.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -76,6 +77,12 @@ namespace Sak_Gabah.Views
 
                 kartuBaru.isiDataKartu(data);
             }
+        }
+
+        private void kelolaAkunbutton_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

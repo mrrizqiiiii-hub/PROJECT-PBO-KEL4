@@ -74,7 +74,7 @@ namespace Sak_Gabah.Views
 
         private void kelolaTransaksibutton_Click(object sender, EventArgs e)
         {
-            V_kelolaTransaksi kelolaTransaksi  = new V_kelolaTransaksi();
+            V_kelolaTransaksi kelolaTransaksi = new V_kelolaTransaksi();
             kelolaTransaksi.Show();
             this.Close();
         }
@@ -99,6 +99,12 @@ namespace Sak_Gabah.Views
                 this.namaKomoditas = filterKomoditas.keyWord;
                 this.tampilkanKartuKomoditas();
             }
+        }
+
+        private void kelolaAkunbutton_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

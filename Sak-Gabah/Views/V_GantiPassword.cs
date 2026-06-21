@@ -26,11 +26,10 @@ namespace Sak_Gabah.Views.Supplier
                 return;
             }
 
-            bool cekPassword = kontrollerAkun.cekPassword(Helpers.UserSession.userAktif.username, passwordlamatextBox.Text);
+            bool gantiPassword = kontrollerAkun.gantiPassword(Helpers.UserSession.userAktif.username, passwordlamatextBox.Text, passwordbarutextBox.Text);
 
-            if (cekPassword)
+            if (gantiPassword)
             {
-                bool ubahPass = kontrollerAkun.gantiPassword(Helpers.UserSession.userAktif.username, passwordbarutextBox.Text);
                 MessageBox.Show($"Password Berhasil Diubah!", "Sukses");
                 this.Close();
             }

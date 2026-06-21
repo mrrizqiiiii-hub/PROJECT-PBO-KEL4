@@ -37,6 +37,7 @@
             stokTotalLabel = new Label();
             kelolaSetoranbutton = new Button();
             kelolaTransaksibutton = new Button();
+            kelolaAkunbutton = new Button();
             SuspendLayout();
             // 
             // roleTampilanlabel
@@ -135,6 +136,18 @@
             kelolaTransaksibutton.UseVisualStyleBackColor = false;
             kelolaTransaksibutton.Click += kelolaTransaksibutton_Click;
             // 
+            // kelolaAkunbutton
+            // 
+            kelolaAkunbutton.BackColor = Color.Transparent;
+            kelolaAkunbutton.FlatAppearance.BorderSize = 0;
+            kelolaAkunbutton.FlatStyle = FlatStyle.Flat;
+            kelolaAkunbutton.Location = new Point(12, 673);
+            kelolaAkunbutton.Name = "kelolaAkunbutton";
+            kelolaAkunbutton.Size = new Size(45, 46);
+            kelolaAkunbutton.TabIndex = 13;
+            kelolaAkunbutton.UseVisualStyleBackColor = false;
+            kelolaAkunbutton.Click += kelolaAkunbutton_Click;
+            // 
             // V_dashboardKaryawan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -142,6 +155,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1350, 729);
+            Controls.Add(kelolaAkunbutton);
             Controls.Add(kelolaTransaksibutton);
             Controls.Add(kelolaSetoranbutton);
             Controls.Add(roleTampilanlabel);
@@ -167,5 +181,6 @@
         private Label stokTotalLabel;
         private Button kelolaSetoranbutton;
         private Button kelolaTransaksibutton;
+        private Button kelolaAkunbutton;
     }
 }

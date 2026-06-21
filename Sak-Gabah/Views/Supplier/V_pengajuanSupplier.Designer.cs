@@ -34,6 +34,7 @@
             dashboardButton = new Button();
             tambahPengajuanbutton = new Button();
             pengajuanLayoutPanel = new FlowLayoutPanel();
+            kelolaAkunbutton = new Button();
             SuspendLayout();
             // 
             // riwayatSetorbutton
@@ -92,6 +93,18 @@
             pengajuanLayoutPanel.Size = new Size(1099, 603);
             pengajuanLayoutPanel.TabIndex = 25;
             // 
+            // kelolaAkunbutton
+            // 
+            kelolaAkunbutton.BackColor = Color.Transparent;
+            kelolaAkunbutton.FlatAppearance.BorderSize = 0;
+            kelolaAkunbutton.FlatStyle = FlatStyle.Flat;
+            kelolaAkunbutton.Location = new Point(12, 672);
+            kelolaAkunbutton.Name = "kelolaAkunbutton";
+            kelolaAkunbutton.Size = new Size(45, 46);
+            kelolaAkunbutton.TabIndex = 26;
+            kelolaAkunbutton.UseVisualStyleBackColor = false;
+            kelolaAkunbutton.Click += kelolaAkunbutton_Click;
+            // 
             // V_pengajuanSupplier
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -99,6 +112,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1350, 729);
+            Controls.Add(kelolaAkunbutton);
             Controls.Add(pengajuanLayoutPanel);
             Controls.Add(tambahPengajuanbutton);
             Controls.Add(riwayatSetorbutton);
@@ -118,5 +132,6 @@
         private Button dashboardButton;
         private Button tambahPengajuanbutton;
         private FlowLayoutPanel pengajuanLayoutPanel;
+        private Button kelolaAkunbutton;
     }
 }

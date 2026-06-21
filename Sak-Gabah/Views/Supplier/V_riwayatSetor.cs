@@ -78,7 +78,7 @@ namespace Sak_Gabah.Views
 
             if (this.tanggalAwal != default(DateOnly) && this.tanggalAkhir != default(DateOnly))
             {
-                dataMentah = kontroller.ambilDataHistoriPerUser(Helpers.UserSession.userAktif.id ,this.tanggalAwal, this.tanggalAkhir);
+                dataMentah = kontroller.ambilDataHistoriPerUser(Helpers.UserSession.userAktif.id, this.tanggalAwal, this.tanggalAkhir);
             }
 
             else if (!string.IsNullOrWhiteSpace(this.namaKomoditas))
@@ -109,6 +109,12 @@ namespace Sak_Gabah.Views
             }).ToList();
 
             setorandataGridView.DataSource = dataRata;
+        }
+
+        private void kelolaAkunbutton_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

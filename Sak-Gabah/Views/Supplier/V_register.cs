@@ -53,23 +53,11 @@ namespace Sak_Gabah.Views
 
             try
             {
-                if (authController.cekUsername(usernameInput))
-                {
-                    MessageBox.Show($"Username '{usernameInput}' sudah digunakan oleh orang lain. Silakan cari nama unik yang berbeda!", "Username Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    return;
-                }
-
-                if (authController.cekEmail(emailInput))
-                {
-                    MessageBox.Show($"Email '{emailInput}' sudah pernah didaftarkan pada akun lain. Silakan gunakan email yang berbeda!",
-                                    "Email Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    return;
-                }
 
                 M_user userBaru = new M_user();
                 userBaru.username = usernameInput;
                 userBaru.password = passwordInput;
-                userBaru.email = emailtextBox.Text;
+                userBaru.email = emailInput;
 
                 bool berhasilSimpan = authController.RegistrasiUserBaru(userBaru);
 
@@ -80,6 +68,10 @@ namespace Sak_Gabah.Views
                     V_halamanLogin halamanLogin = new V_halamanLogin();
                     halamanLogin.Show();
                     this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Email telah digunakan!", "Registrasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
 

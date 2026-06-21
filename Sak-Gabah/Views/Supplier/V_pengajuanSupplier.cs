@@ -48,7 +48,7 @@ namespace Sak_Gabah.Views
         {
             V_tambahPengajuan tambahPengajuan = new V_tambahPengajuan();
             tambahPengajuan.ShowDialog();
-            
+
         }
 
         public void tampilkanKartuKomoditas()
@@ -75,6 +75,12 @@ namespace Sak_Gabah.Views
 
                 pengajuanLayoutPanel.Controls.Add(kartuBaru);
             }
+        }
+
+        private void kelolaAkunbutton_Click(object sender, EventArgs e)
+        {
+            V_kelolaAkun kelolaAkun = new V_kelolaAkun(this);
+            kelolaAkun.ShowDialog();
         }
     }
 }

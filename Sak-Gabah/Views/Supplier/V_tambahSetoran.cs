@@ -28,7 +28,7 @@ namespace Sak_Gabah.Views.Admin
         private void V_tambahSetoran_Load(object sender, EventArgs e)
         {
             List<M_detailKomoditas> daftarMerk = kontrolKomoditas.ambilSemuaMerk(Helpers.UserSession.userAktif.id);
-            
+
             merkcomboBox.DataSource = daftarMerk;
             merkcomboBox.DisplayMember = "merk";
             merkcomboBox.ValueMember = "id";
@@ -63,6 +63,11 @@ namespace Sak_Gabah.Views.Admin
                 MessageBox.Show($"Setoran Berhasil ditambahkan, silahkan proses dan verifikasi oleh karyawan", "Sukses");
                 this.Close();
             }
+        }
+
+        private void batalbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

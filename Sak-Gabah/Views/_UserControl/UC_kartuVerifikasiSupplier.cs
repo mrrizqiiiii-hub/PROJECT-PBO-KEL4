@@ -62,18 +62,18 @@ namespace Sak_Gabah.Views._UserControl
         {
             C_pengajuan kontroller = new C_pengajuan();
 
-            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin MENERIMA pengajuan ini?",
+            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin MENOLAK pengajuan ini?",
                     "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (konfirmasi == DialogResult.Yes)
             {
                 try
                 {
-                    bool berhasil = kontroller.terimaPengajuan(this.pengajuanKomoditas);
+                    bool berhasil = kontroller.tolakPengajuan(this.pengajuanKomoditas);
 
                     if (berhasil)
                     {
-                        MessageBox.Show("Pengajuan berhasil diterima!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Pengajuan ditolak diterima!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Dispose();
                     }
                 }

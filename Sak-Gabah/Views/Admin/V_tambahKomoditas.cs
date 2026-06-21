@@ -32,14 +32,6 @@ namespace Sak_Gabah.Views.Admin
 
             C_komoditas kontrolKomoditas = new C_komoditas();
 
-            if (kontrolKomoditas.cekDuplikat(namaKomoditastextBox.Text))
-            {
-                MessageBox.Show
-                    ($"Komoditas dengan nama '{namaKomoditastextBox.Text}' sudah ada di sistem! Silakan gunakan nama lain.",
-                      "Data Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             bool sukses = kontrolKomoditas.TambahData(dataKomoditas);
 
             if (sukses)
@@ -49,7 +41,7 @@ namespace Sak_Gabah.Views.Admin
             }
             else
             {
-                MessageBox.Show("Gagal menambahkan data ke database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Gagal menambahkan data ke database, nama komoditas sudah digunakan!.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

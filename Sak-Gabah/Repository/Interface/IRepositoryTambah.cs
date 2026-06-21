@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sak_Gabah.Controllers.Interface
+namespace Sak_Gabah.Repository.Interface
 {
-    public interface IControllerTambah<T>
+    public interface IRepositoryTambah<T>
     {
         bool TambahData(T data);
     }
